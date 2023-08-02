@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('nama_mk');
             $table->string('semester');
             $table->string('sks');
-            $table->sstring('program_studi');
+            $table->string('program_studi');
             $table->timestamps();
         });
     }
