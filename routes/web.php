@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('layouts.dashboard.app');
+    return view('pages.landing.index');
 });
 
 Auth::routes();
