@@ -28,4 +28,9 @@ class Dosen extends Model
         return $this->hasMany(MKPengampu::class);
     }
 
+    public function Publikasi(): HasMany
+    {
+        return $this->hasMany(Publikasi::class);
+    }
+
 }
