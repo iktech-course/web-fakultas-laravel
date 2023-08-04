@@ -11,11 +11,11 @@
         </div>
         
         <ul class="sidebar-menu">
-            <li class="sidebar-item">
-                <a href="javascript:void(0)"><i class="ti ti-home me-2"></i>Dashboard</a>
+            <li class="sidebar-item active">
+                <a href="{{ route('home') }}"><i class="ti ti-home me-2"></i>Dashboard</a>
             </li>
             <li class="sidebar-item">
-                <a href="javascript:void(0)"><i class="ti ti-file-text me-2"></i>Berita</a>
+                <a href="{{ route('berita.index') }}"><i class="ti ti-file-text me-2"></i>Berita</a>
             </li>
             <li class="sidebar-item">
                 <a href="javascript:void(0)"><i class="ti ti-book-2 me-2"></i>Kegiatan Akademik</a>

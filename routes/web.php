@@ -25,6 +25,7 @@ Auth::routes();
 
 // Admin Routes
 Route::prefix('admin')->group(function () {
-    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('home');
+    Route::resource('berita', \App\Http\Controllers\Admin\BeritaController::class);
 });
 
