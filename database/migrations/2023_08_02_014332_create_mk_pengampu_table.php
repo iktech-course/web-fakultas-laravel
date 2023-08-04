@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('mk_pengampu', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_dosen');
+            $table->unsignedBigInteger('id_mk');
             $table->foreign('id_dosen')->references('id')->on('dosen');
             $table->foreign('id_mk')->references('id')->on('mata_kuliah');
             $table->timestamps();
