@@ -78,7 +78,7 @@
                                          class="rounded"><i class="uil uil-twitter align-middle"
                                              title="twitter"></i></a></li>
                                  <li class="list-inline-item mb-0"><a href="https://www.gmail.com/" target="_blank"
-                                         class="rounded"><i class="uil uil-gmail align-middle" title="email"></i></a>
+                                         class="rounded"><i class="uil uil-message align-middle" title="email"></i></a>
                                  </li>
                              </ul><!--end icon-->
                          </div><!--end col-->
