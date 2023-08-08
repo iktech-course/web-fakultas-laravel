@@ -12,6 +12,7 @@ use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\Admin\BeritaController as AdminBeritaController;
+use App\Http\Controllers\KegiatanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,12 @@ Route::get('/dosen', [DosenController::class, 'index'])->name('landing.dosen.ind
 Route::get('/dosen-detail', [DosenController::class, 'show'])->name('landing.dosen.show');
 Route::get('/profil-fakultas', [ProfilController::class, 'index'])->name('landing.profil.index');
 Route::get('/prodi', [ProdiController::class, 'index'])->name('landing.prodi.index');
+Route::get('/prodi/ti', [ProdiController::class, 'show_ti'])->name('landing.prodi.show-ti');
+Route::get("/prodi/si", [ProdiController::class, 'show_si'])->name('landing.prodi.show-si');
+Route::get('/kegiatan-a' ,[KegiatanController::class, 'index'])->name('landing.kegiatan.index');
+Route::get('/kegiatan-s' ,[KegiatanController::class, 'show'])->name('landing.kegiatan.show');
+
+
 
 
 

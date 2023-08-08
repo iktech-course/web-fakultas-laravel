@@ -195,23 +195,6 @@
                                                 <span class="text-muted"> Waktu: 15th April 2021</span>
                                             </div>
                                         </div>
-
-                                        <div class="d-flex align-items-center">
-                                            <img src="assets/images/1undhari/wisudawan.jpg" class="avatar avatar-small rounded" style="width: auto;" alt="">
-                                            <div class="flex- ms-3">
-                                                <a href="javascript:void(0)" class="d-block title text-dark">Julul Postingan</a>
-                                                <span class="text-muted"> Waktu: 15th April 2021</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex align-items-center">
-                                            <img src="assets/images/1undhari/wisudawan.jpg" class="avatar avatar-small rounded" style="width: auto;" alt="">
-                                            <div class="flex-1 ms-3">
-                                                <a href="javascript:void(0)" class="d-block title text-dark">Julul Postingan</a>
-                                                <span class="text-muted"> Waktu: 15th April 2021</span>
-                                            </div>
-                                        </div>
-
                                     </div>
                                 </div>
                                 <!-- RECENT POST -->

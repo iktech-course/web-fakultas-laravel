@@ -11,4 +11,14 @@ class ProdiController extends Controller
     {
         return view('pages.landing.prodi.index');
     }
+
+    public function show_ti()
+    {
+        return view('pages.landing.prodi.show-ti');
+    }
+
+    public function show_si()
+    {
+        return view('pages.landing.prodi.show-si');
+    }
 }

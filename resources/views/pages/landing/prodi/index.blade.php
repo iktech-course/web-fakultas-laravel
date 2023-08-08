@@ -29,10 +29,10 @@
                                 <div class="card blog blog-primary rounded border-0 shadow overflow-hidden">
                                     <div class="row align-items-center g-0">
                                         <div class="col-md-6">
-                                            <img src="assets/images/1undhari/ti.png" class="img-fluid" alt="">
+                                            <img src="{{ asset('assets/landing/images/1undhari/ti.png') }}" class="img-fluid" alt="">
                                             <div class="overlay"></div>
                                             <div class="author">
-                                                <small class="user d-block"><i class="uil uil-user"></i> Kaprodi: Lido Sabda Lesmana M.Kom</small>
+                                                <small class="user"><i class="uil uil-user"></i> Kaprodi: Lido Sabda Lesmana M.Kom</small>
                                             </div>
                                         </div><!--end col-->
         
@@ -41,7 +41,7 @@
                                                 <h5><a href="javascript:void(0)" class="card-title title text-dark">Teknik Informatika</a></h5>
                                                 <p class="text-muted mb-0">Jurusan Teknik Informatika adalah program studi di perguruan tinggi yang fokus pada pengembangan dan penerapan teknologi informasi, termasuk perangkat lunak, perangkat keras, dan jaringan komputer.</p>
                                                 <div class="post-meta d-flex justify-content-between mt-3">
-                                                    <a href="prodi-detail.html" class="text-primary fw-medium readmore">Baca Lebih Lanjut <i class="uil uil-angle-right-b align-middle"></i></a>
+                                                    <a href="{{ route('landing.prodi.show-ti') }}" class="text-primary fw-medium readmore">Baca Lebih Lanjut <i class="uil uil-angle-right-b align-middle"></i></a>
                                                 </div>
                                             </div>
                                         </div><!--end col-->
@@ -57,7 +57,7 @@
                                 <div class="card blog blog-primary rounded border-0 shadow overflow-hidden">
                                     <div class="row align-items-center g-0">
                                         <div class="col-md-6">
-                                            <img src="assets/images/1undhari/si.png" class="img-fluid" alt="">
+                                            <img src="{{ asset('assets/landing/images/1undhari/si.png') }}" class="img-fluid" alt="">
                                             <div class="overlay"></div>
                                             <div class="author">
                                                 <small class="user d-block"><i class="uil uil-user"></i> Kaprodi: Elinda Revita M.Kom</small>
@@ -69,7 +69,7 @@
                                                 <h5><a href="javascript:void(0)" class="card-title title text-dark">Sistem Informasi</a></h5>
                                                 <p class="text-muted mb-0">Jurusan Sistem Informasi adalah sebuah bidang studi yang menggabungkan ilmu komputer dengan manajemen bisnis untuk mengelola dan memanfaatkan teknologi informasi dalam suatu organisasi. Fokus utama dari jurusan ini adalah mengembangkan, menerapkan, dan memelihara sistem informasi yang efisien untuk mendukung proses bisnis dan pengambilan keputusan.</p>
                                                 <div class="post-meta d-flex justify-content-between mt-3">
-                                                    <a href="prodi-detail.html" class="text-primary fw-medium readmore">Baca Lebih Lanjut <i class="uil uil-angle-right-b align-middle"></i></a>
+                                                    <a href="{{ route('landing.prodi.show-si') }}" class="text-primary fw-medium readmore">Baca Lebih Lanjut <i class="uil uil-angle-right-b align-middle"></i></a>
                                                 </div>
                                             </div>
                                         </div><!--end col-->

@@ -39,9 +39,9 @@
                         <li>
                             <ul>
                                 <li><a href="{{ route('landing.profil.index') }}" class="sub-menu-item">Profil Fakultas</a></li>
-                                <li><a href="" class="sub-menu-item">Prodi</a></li>
+                                <li><a href="{{ route('landing.prodi.index') }}" class="sub-menu-item">Prodi</a></li>
                                 <li><a href="{{ route('landing.dosen.index') }}" class="sub-menu-item">Dosen</a></li>
-                                <li><a href="kegiatan-list.html" class="sub-menu-item">Kegiatan Akademik</span></a></li>
+                                <li><a href="{{ route('landing.kegiatan.index') }}" class="sub-menu-item">Kegiatan Akademik</span></a></li>
                             </ul>
                         </li>
                     </ul>
