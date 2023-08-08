@@ -37,10 +37,36 @@
                                 <td class="text-center p-3">{{ $item->judul }}</td>
                                 <td class="text-center p-3">{!! $item->isi !!}</td>
                                 <td class="text-center p-3">
-                                    <a href="#" class="btn btn-sm btn-warning">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-soft-danger ms-2">Hapus</a>
+                                    <a href="{{ route('berita.edit', $item->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                    <a href="#"  data-bs-toggle="modal" data-bs-target="#ConfirmModal-{{ $item->id }}" class="btn btn-sm btn-soft-danger ms-2">Hapus</a>
                                 </td>
                             </tr>
+
+                             <!-- Modal Content Start -->
+                             <div class="modal fade" id="ConfirmModal-{{ $item->id }}" tabindex="-1" aria-labelledby="LoginForm-title" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content rounded shadow border-0">
+                                        <div class="modal-header border-bottom">
+                                            <h5 class="modal-title" id="LoginForm-title">Konfirmasi Hapus Data</h5>
+                                            <button type="button" class="btn btn-icon btn-close" data-bs-dismiss="modal" id="close-modal"><i class="uil uil-times fs-4 text-dark"></i></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="p-3 rounded box-shadow">
+                                                <p class="text-muted mb-0">Apakah Anda Akan Menghapus Data Ini...?</p>                                                        
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                         <form action="{{ route('berita.destroy', $item->id) }}" method="POST">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">Hapus</button>
+                                         </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal Content End -->
                             <!-- End -->
                         @endforeach
                        
