@@ -38,8 +38,8 @@
                     <ul class="submenu">
                         <li>
                             <ul>
-                                <li><a href="profil-fakultas.html" class="sub-menu-item">Profil Fakultas</a></li>
-                                <li><a href="prodi.html" class="subm-menu-item">Prodi</a></li>
+                                <li><a href="{{ route('landing.profil.index') }}" class="sub-menu-item">Profil Fakultas</a></li>
+                                <li><a href="" class="sub-menu-item">Prodi</a></li>
                                 <li><a href="{{ route('landing.dosen.index') }}" class="sub-menu-item">Dosen</a></li>
                                 <li><a href="kegiatan-list.html" class="sub-menu-item">Kegiatan Akademik</span></a></li>
                             </ul>

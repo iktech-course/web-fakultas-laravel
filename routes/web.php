@@ -1,6 +1,17 @@
 <?php
 
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DosenController;
+use App\Http\Controllers\ProdiController;
+use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\KontakController;
+use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\FasilitasController;
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\PendaftaranController;
+use App\Http\Controllers\Admin\BeritaController as AdminBeritaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,13 +32,16 @@ Route::get('/', function () {
     return view('pages.landing.index');
 })->name('landing.beranda');
 
-Route::get('/berita', [App\Http\Controllers\BeritaController::class, 'index'])->name('landing.berita.index');
-Route::get('/berita-detail', [App\Http\Controllers\BeritaController::class, 'show'])->name('landing.berita.show');
-Route::get('/fasilitas', [App\Http\Controllers\FasilitasController::class, 'index'])->name('landing.fasilitas.index');
-Route::get('/pendaftaran', [App\Http\Controllers\PendaftaranController::class, 'index'])->name('landing.pendaftaran.index');
-Route::get('/kontak', [App\Http\Controllers\KontakController::class, 'index'])->name('landing.kontak.index');
-Route::get('/dosen', [App\Http\Controllers\DosenController::class, 'index'])->name('landing.dosen.index');
-Route::get('/dosen-detail', [App\Http\Controllers\DosenController::class, 'show'])->name('landing.dosen.show');
+Route::get('/berita', [BeritaController::class, 'index'])->name('landing.berita.index');
+Route::get('/berita-detail', [BeritaController::class, 'show'])->name('landing.berita.show');
+Route::get('/fasilitas', [FasilitasController::class, 'index'])->name('landing.fasilitas.index');
+Route::get('/pendaftaran', [PendaftaranController::class, 'index'])->name('landing.pendaftaran.index');
+Route::get('/kontak', [KontakController::class, 'index'])->name('landing.kontak.index');
+Route::get('/dosen', [DosenController::class, 'index'])->name('landing.dosen.index');
+Route::get('/dosen-detail', [DosenController::class, 'show'])->name('landing.dosen.show');
+Route::get('/profil-fakultas', [ProfilController::class, 'index'])->name('landing.profil.index');
+Route::get('/prodi', [ProdiController::class, 'index'])->name('landing.prodi.index');
+
 
 
 
@@ -35,7 +49,7 @@ Auth::routes();
 
 // Admin Routes
 Route::prefix('admin')->group(function () {
-    Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('home');
-    Route::resource('berita', \App\Http\Controllers\Admin\BeritaController::class);
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::resource('berita', AdminBeritaController::class);
 });
 

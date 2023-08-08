@@ -13,7 +13,7 @@
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col-lg-2 col-md-3 text-md-start text-center">
-                                    <img src="assets/images/1undhari/profil-default.png"
+                                    <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}"
                                         class="avatar avatar-large rounded-circle shadow d-block mx-auto" alt="">
                                 </div><!--end col-->
 

@@ -4,7 +4,7 @@
 
 @section('content')
         <!-- Hero Start -->
-        <section class="bg-half-170 d-table w-100" style="background: url('assets/images/1undhari/berita.jpg') top;">
+        <section class="bg-half-170 d-table w-100" style="background: url('{{ asset('assets/landing/images/1undhari/berita.jpg') }}') top;">
             <div class="bg-overlay"></div>
             <div class="container">
                 <div class="row mt-5 justify-content-center">
@@ -38,7 +38,7 @@
                                 <li class="list-inline-item date text-muted"><i class="uil uil-calendar-alt text-dark"></i> 25th June 2021</li>
                             </ul>
                             
-                            <img src="assets/images/1undhari/berita.jpg" class="img-fluid rounded-md shadow" alt="">
+                            <img src="{{ asset('assets/landing/images/1undhari/berita.jpg') }}" class="img-fluid rounded-md shadow" alt="">
 
                             <h5 class="mt-4">Mornings contain the secret to an extraordinarily successful life</h5>
 
@@ -51,7 +51,7 @@
                                     <div class="d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <a class="pe-3" href="#">
-                                                <img src="assets/images/1undhari/profil-default.png" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
+                                                <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
                                             </a>
                                             <div class="flex-1 commentor-detail">
                                                 <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark media-heading">Nama</a></h6>
@@ -68,7 +68,7 @@
                                     <div class="d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <a class="pe-3" href="#">
-                                                <img src="assets/images/1undhari/profil-default.png" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
+                                                <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
                                             </a>
                                             <div class="flex-1 commentor-detail">
                                                 <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark media-heading">Nama</a></h6>
@@ -85,7 +85,7 @@
                                     <div class="d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <a class="pe-3" href="#">
-                                                <img src="assets/images/1undhari/profil-default.png" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
+                                                <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
                                             </a>
                                             <div class="flex-1 commentor-detail">
                                                 <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark media-heading">Nama</a></h6>
@@ -102,7 +102,7 @@
                                     <div class="d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <a class="pe-3" href="#">
-                                                <img src="assets/images/1undhari/profil-default.png" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
+                                                <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
                                             </a>
                                             <div class="flex-1 commentor-detail">
                                                 <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark media-heading">Nama</a></h6>
@@ -119,7 +119,7 @@
                                     <div class="d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <a class="pe-3" href="#">
-                                                <img src="assets/images/1undhari/profil-default.png" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
+                                                <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
                                             </a>
                                             <div class="flex-1 commentor-detail">
                                                 <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark media-heading">Nama</a></h6>
@@ -189,7 +189,7 @@
                                     <h5 class="widget-title">Postinga Lainnya</h5>
                                     <div class="mt-4">
                                         <div class="d-flex align-items-center">
-                                            <img src="assets/images/1undhari/wisudawan.jpg" class="avatar avatar-small rounded" style="width: auto;" alt="">
+                                            <img src="{{ asset('assets/landing/images/1undhari/wisudawan.jpg') }}" class="avatar avatar-small rounded" style="width: auto;" alt="">
                                             <div class="flex-1 ms-3">
                                                 <a href="javascript:void(0)" class="d-block title text-dark">Julul Postingan</a>
                                                 <span class="text-muted"> Waktu: 15th April 2021</span>
