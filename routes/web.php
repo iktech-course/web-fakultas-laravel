@@ -12,6 +12,7 @@ use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\Admin\BeritaController as AdminBeritaController;
+use App\Http\Controllers\Admin\DosenController as AdminDosenController;
 use App\Http\Controllers\KegiatanController;
 
 /*
@@ -57,6 +58,8 @@ Auth::routes();
 // Admin Routes
 Route::prefix('admin')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::resource('dosen', AdminDosenController::class);
     Route::resource('berita', AdminBeritaController::class);
+
 });
 

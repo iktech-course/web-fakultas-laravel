@@ -27,7 +27,7 @@
                 <a href="javascript:void(0)"><i class="ti ti-badge me-2"></i>Akademik</a>
                 <div class="sidebar-submenu">
                   <ul>
-                    <li><a href="javascript:void(0)">Dosen</a></li>
+                    <li><a href="{{ route('dosen.index') }}">Dosen</a></li>
                     <li><a href="javascript:void(0)">Mata Kuliah</a></li>
                   </ul>
                 </div>
