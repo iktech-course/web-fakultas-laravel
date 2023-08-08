@@ -6,6 +6,7 @@ use App\Models\Berita;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class BeritaController extends Controller
 {
@@ -66,7 +67,7 @@ class BeritaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // 
     }
 
     /**
@@ -74,7 +75,11 @@ class BeritaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        // Get Data Berita
+        $berita = Berita::findOrFail($id);
+
+        // dd($berita);
+        return view('pages.dashboard.berita.edit', compact('berita'));
     }
 
     /**
@@ -82,7 +87,44 @@ class BeritaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+         // Validasi Input
+         $this->validate($request,[
+            'judul' => 'required',
+            'foto' => 'image|mimes:png,jpg,jpeg|max:2000',
+            'isi' => 'required'
+        ]);
+
+        // Mengambil Data Berita
+        $berita = Berita::findOrFail($id);
+        
+        // Mekalukan Pengecekan Jika Ada File Gambar
+        if ($request->hasFile('foto'))
+        {
+            // Upload Foto
+            $foto = $request->file('foto');
+            $foto->storeAs('public/berita', $foto->hashName());
+
+            // Hapus Gambar Lama
+            Storage::delete('public/berita', $berita->foto);
+
+            // Simpan Data Berita
+            $berita->update([
+                'id_user' => Auth::user()->id,
+                'judul' => $request->input('judul'),
+                'foto' => $foto->hashName(),
+                'isi' => $request->input('isi')
+            ]);
+        }
+        else {
+            $berita->update([
+                'id_user' => Auth::user()->id,
+                'judul' => $request->input('judul'),
+                'isi' => $request->input('isi')
+            ]);
+        }
+
+        // dd($berita);
+        return redirect()->route('berita.index');
     }
 
     /**
@@ -90,6 +132,17 @@ class BeritaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // Ambil data Berita
+        $berita = Berita::findOrFail($id);
+
+        // Hapus Gambar
+        Storage::delete('public/berita', $berita->foto);
+
+        // Hapus Berita
+        $berita->delete();
+
+        // Kembali Ke Halaman Berita Index
+        return redirect()->route('berita.index');
+
     }
 }
