@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\MataKuliah;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MatakuliahCotroller extends Controller
 {
@@ -22,7 +24,7 @@ class MatakuliahCotroller extends Controller
     public function create()
     {
         //
-        return view('pages.dashboard.dosen.create');
+        return view('pages.dashboard.matakuliah.create');
     }
 
     /**
@@ -31,6 +33,26 @@ class MatakuliahCotroller extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request,[
+            'kode_mk' =>'required',
+            'nama_mk' =>'required',
+            'semester' =>'required',
+            'sks'=> 'required',
+            'program_studi' => 'required'
+        ]);
+
+       // dd($request);
+       MataKuliah::create([
+        'kode_mk' => $request->input('kode_mk'),
+        'nama_mk' => $request->input('nama_mk'),
+        'semester' => $request->input('semester'),
+        'sks' => $request->input('sks'),
+        'program_studi' => $request->input('program_studi')
+       ]);
+
+       return redirect()->route('matakuliah.index');
+
+        //Simpan Matakuliah
     }
 
     /**
@@ -47,6 +69,8 @@ class MatakuliahCotroller extends Controller
     public function edit(string $id)
     {
         //
+        $matakuliah = MataKuliah::findOrFail($id);
+        return view('pages.dashboard.matakuliah.edit', compact('matakuliah'));
     }
 
     /**
@@ -55,6 +79,25 @@ class MatakuliahCotroller extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $this->validate($request,[
+            'kode_mk' =>'required',
+            'nama_mk' =>'required',
+            'semester' =>'required',
+            'sks'=> 'required',
+            'program_studi' => 'required'
+        ]);
+
+        $matakuliah = MataKuliah::findOrFail($id);
+
+        $matakuliah->update([
+            'kode_mk' =>'required',
+            'nama_mk' =>'required',
+            'semester' =>'required',
+            'sks'=> 'required',
+            'program_studi' => 'required'
+        ]);
+
+        return redirect()->route('matakuliah.index');
     }
 
     /**
@@ -63,5 +106,11 @@ class MatakuliahCotroller extends Controller
     public function destroy(string $id)
     {
         //
+        $matakuliah = MataKuliah::findOrFail($id);
+
+        $matakuliah->delete();
+
+        return redirect()->route('matakuliah.index');
+
     }
 }
