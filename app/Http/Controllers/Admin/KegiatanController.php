@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\KegiatanAkademik;
 use Illuminate\Http\Request;
 
 class KegiatanController extends Controller
@@ -12,8 +13,8 @@ class KegiatanController extends Controller
      */
     public function index()
     {
-        //
-        return view('pages.dashboard.kegiatan.index');
+        $kegiatan = KegiatanAkademik::paginate(5);
+        return view('pages.dashboard.kegiatan.index', compact('kegiatan'));
 
     }
 
@@ -32,7 +33,29 @@ class KegiatanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'nama_kegiatan' => 'required',
+            'deskripsi'     => 'required',
+            'tanggal'       => 'required',
+            'waktu'         => 'required',
+            'lokasi'        => 'required',
+            'pelaksana'     => 'required'
+        ]);
+
+        // dd($request);
+
+        // Simpan Ke Database
+        KegiatanAkademik::create([
+            'nama_kegiatan' => $request->input('nama_kegiatan'),
+            'deskripsi'     => $request->input('deskripsi'),
+            'tanggal'       => $request->input('tanggal'),
+            'waktu'         => $request->input('waktu'),
+            'lokasi'        => $request->input('lokasi'),
+            'pelaksana'     => $request->input('pelaksana'),
+        ]);
+
+        // Kembali Ke Halaman Index
+        return redirect()->route('kegiatan.index');
     }
 
     /**
@@ -40,7 +63,7 @@ class KegiatanController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // 
     }
 
     /**
@@ -48,7 +71,10 @@ class KegiatanController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        // Ambil Data Kegiatan
+        $kegiatan = KegiatanAkademik::findOrFail($id);
+
+        return view('pages.dashboard.kegiatan.edit', compact('kegiatan'));
     }
 
     /**
@@ -56,7 +82,32 @@ class KegiatanController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $this->validate($request,[
+            'nama_kegiatan' => 'required',
+            'deskripsi'     => 'required',
+            'tanggal'       => 'required',
+            'waktu'         => 'required',
+            'lokasi'        => 'required',
+            'pelaksana'     => 'required'
+        ]);
+
+        // dd($request);
+
+        // Ambil Data Kegiatan
+        $kegiatan = KegiatanAkademik::findOrFail($id);
+
+        // Simpan Perubahan Ke Database
+        $kegiatan->update([
+            'nama_kegiatan' => $request->input('nama_kegiatan'),
+            'deskripsi'     => $request->input('deskripsi'),
+            'tanggal'       => $request->input('tanggal'),
+            'waktu'         => $request->input('waktu'),
+            'lokasi'        => $request->input('lokasi'),
+            'pelaksana'     => $request->input('pelaksana'),
+        ]);
+
+        // Kembali Ke Halaman Index
+        return redirect()->route('kegiatan.index');
     }
 
     /**
@@ -64,6 +115,13 @@ class KegiatanController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // Ambil Data Kegiatan
+        $kegiatan = KegiatanAkademik::findOrFail($id);
+
+        // Hapus Kegiatan
+        $kegiatan->delete();
+
+        // Kembali Ke Halaman Login
+        return redirect()->route('kegiatan.index');
     }
 }

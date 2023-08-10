@@ -22,7 +22,7 @@ class MatakuliahCotroller extends Controller
     public function create()
     {
         //
-        return view('pages.dashboard.dosen.create');
+        return view('pages.dashboard.matakuliah.create');
     }
 
     /**

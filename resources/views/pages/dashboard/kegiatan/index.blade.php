@@ -32,45 +32,36 @@
                             <th class="text-center border-bottom p-3">Tanggal</th>
                             <th class="text-center border-bottom p-3">Waktu</th>
                             <th class="text-center border-bottom p-3">Lokasi</th>
+                            <th class="text-center border-bottom p-3">Pelaksana</th>
                             <th class="text-center border-bottom p-3">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Start -->
+                       @foreach ($kegiatan as $no => $item)
+                            <!-- Start -->
                         <tr>
-                            <th class="p-3">1</th>
-                            <td class="text-center p-3">Wisuda Periode 16</td>
-                            <td class="text-center p-3">Kegiatan wisuda</td>
-                            <td class="text-center p-3">09/09/2023</td>
-                            <td class="text-center p-3">08:00 - 12:00 WIB</td>
-                            <td class="text-center p-3">Dara Jingga Convention Center</td>
+                            <th class="p-3">{{ ++$no + ($kegiatan->currentPage() - 1) * $kegiatan->perPage() }}</th>
+                            <td class="text-center p-3">{{ $item->nama_kegiatan }}</td>
+                            <td class="text-center p-3">{!! $item->deskripsi !!}</td>
+                            <td class="text-center p-3">{{ $item->tanggal }}</td>
+                            <td class="text-center p-3">{{ $item->waktu }} WIB</td>
+                            <td class="text-center p-3">{{ $item->lokasi }}</td>
+                            <td class="text-center p-3">{{ $item->pelaksana }}</td>
                             <td class="text-start p-3">
-                                <a href="#" class="btn btn-sm btn-warning mb-2">Edit</a>
+                                <a href="{{ route('kegiatan.edit', $item->id) }}" class="btn btn-sm btn-warning mb-2">Edit</a>
                                 <a href="#" class="btn btn-sm btn-soft-danger">Hapus</a>
                             </td>
                         </tr>
                         <!-- End -->
+                       @endforeach
                     </tbody>
                 </table>
             </div>
         </div><!--end col-->
     </div><!--end row-->
 
-    <div class="row text-center">
-        <!-- PAGINATION START -->
-        <div class="col-12 mt-4">
-            <div class="d-md-flex align-items-center text-center justify-content-between">
-                <span class="text-muted me-3">Showing 1 - 10 out of 50</span>
-                <ul class="pagination mb-0 justify-content-center mt-4 mt-sm-0">
-                    <li class="page-item"><a class="page-link" href="javascript:void(0)" aria-label="Previous">Prev</a></li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Next">Next</a></li>
-                 </ul>
-            </div>
-        </div><!--end col-->
-        <!-- PAGINATION END -->
+    <div class="row text-end mt-3">
+        {{ $kegiatan->links('vendor.pagination.bootstrap-5') }}
     </div><!--end row-->
 </div>
 @endsection
