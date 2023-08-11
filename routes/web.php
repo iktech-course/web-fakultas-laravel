@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\KegiatanController as AdminKegiatanContoller;
 use App\Http\Controllers\Admin\PesanController as AdminPesanController;
 use App\Http\Controllers\Admin\UserCotroller as AdminUserContoller;
 use App\Http\Controllers\Admin\KontakController as AdminKontakController;
+use App\Http\Controllers\LandingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,10 +36,12 @@ use App\Http\Controllers\Admin\KontakController as AdminKontakController;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('pages.landing.index');
-})->name('landing.beranda');
+// Route::get('/', function () {
+//     return view('pages.landing.index');
+// })->name('landing.beranda');
 
+
+Route::get('/', [LandingController::class, 'index'])->name('landing.beranda');
 Route::get('/berita', [BeritaController::class, 'index'])->name('landing.berita.index');
 Route::get('/berita-detail/{id}', [BeritaController::class, 'show'])->name('landing.berita.show');
 Route::get('/fasilitas', [FasilitasController::class, 'index'])->name('landing.fasilitas.index');

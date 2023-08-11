@@ -20,7 +20,7 @@
                                         <p class="para-desc text-white-50 mx-auto">Daftar dan Bergabung bersama kami untuk
                                             menemukan potensi dirimu</p>
                                         <div class="mt-4">
-                                            <a href="pendaftaran.html" class="btn btn-primary mt-2"><i
+                                            <a href="{{ route('landing.pendaftaran.index') }}" class="btn btn-primary mt-2"><i
                                                     class="uil uil-book-open"></i>Daftar Sekarang</a>
                                         </div>
                                     </div>
@@ -40,11 +40,10 @@
                                     <div class="title-heading text-white mt-4">
                                         <h1 class="display-4 text-white fw-bold mb-3">Eksplorasi Dunia Digital Bersama Kami
                                         </h1>
-                                        <p class="para-desc text-white-50 mx-auto">Daftar dan Bergabung bersama kami,
-                                            eksplorasi perkembangan dunia teknologi komputer</p>
+                                        <p class="para-desc text-white-50 mx-auto">Temukan Berita Terbaru Seputar Teknologi dan Informasi</p>
                                         <div class="mt-4">
-                                            <a href="pendaftaran.html" class="btn btn-primary mt-2"><i
-                                                    class="uil uil-graduation-cap"></i>Daftar Sekarang</a>
+                                            <a href="{{ route('landing.berita.index') }}" class="btn btn-primary mt-2"><i
+                                                    class="uil uil-graduation-cap"></i>Innovasi Terbaru</a>
                                         </div>
                                     </div>
                                 </div><!--end col-->
@@ -63,11 +62,10 @@
                                     <div class="title-heading text-white mt-4">
                                         <h1 class="display-4 text-white fw-bold mb-3">Berkarya dan Berinovasi di Fakultas
                                             Ilmu Komputer</h1>
-                                        <p class="para-desc text-white-50 mx-auto">Daftar dan Bergabung bersama kami,
-                                            ciptakan karya terbaikmu dibidang teknologi</p>
+                                        <p class="para-desc text-white-50 mx-auto">Pilihlah jalur karier Anda di dunia ilmu komputer. Temukan program studi yang sesuai untuk mencapai impian Anda dalam teknologi.</p>
                                         <div class="mt-4">
-                                            <a href="pendaftaran.html" class="btn btn-primary mt-2"><i
-                                                    class="uil uil-user"></i>Daftar Sekarang</a>
+                                            <a href="{{ route('landing.prodi.index') }}" class="btn btn-primary mt-2"><i
+                                                    class="uil uil-user"></i>Program Studi</a>
                                         </div>
                                     </div>
                                 </div><!--end col-->
@@ -107,7 +105,7 @@
                                         <p class="text-muted mt-2">Fakultas ilmu komputer yang unggul, menawarkan kurikulum
                                             yang relevan dengan perkembangan industri teknologi informasi dan komputer
                                             terkini.</p>
-                                        <a href="prodi-detail.html" class="text-primary read-more">Read More <i
+                                        <a href="{{ route('landing.prodi.index') }}" class="text-primary read-more">Read More <i
                                                 class="uil uil-angle-right-b align-middle"></i></a>
                                         <i class="uil uil-file full-img"></i>
                                     </div>
@@ -125,7 +123,7 @@
                                         <p class="text-muted mt-2">Fasilitas yang memadai dan infrastruktur yang modern
                                             adalah faktor penting dalam mendukung pembelajaran dan penelitian di bidang ilmu
                                             komputer</p>
-                                        <a href="fasilitas.html" class="text-primary read-more">Read More <i
+                                        <a href="{{ route('landing.fasilitas.index') }}" class="text-primary read-more">Read More <i
                                                 class="uil uil-angle-right-b align-middle"></i></a>
                                         <i class="uil uil-graduation-cap full-img"></i>
                                     </div>
@@ -143,7 +141,7 @@
                                         <p class="text-muted mt-2">Pengajar yang baik dapat memberikan pendekatan mengajar
                                             yang inovatif dan mendukung mahasiswa dalam mengembangkan keterampilan komputasi
                                             mereka</p>
-                                        <a href="dosen.html" class="text-primary read-more">Read More <i
+                                        <a href="{{ route('landing.dosen.index') }}" class="text-primary read-more">Read More <i
                                                 class="uil uil-angle-right-b align-middle"></i></a>
                                         <i class="uil uil-book-reader full-img"></i>
                                     </div>
@@ -180,7 +178,7 @@
                             <li><i class="uil uil-arrow-circle-right text-primary h5 mb-0 align-middle me-2"></i>S1 Sistem
                                 Informasi</li>
                         </ul>
-                        <a href="prodi.html" class="btn btn-outline-primary mt-3">Baca Lebih Lanjut</a>
+                        <a href="{{ route('landing.prodi.index') }}" class="btn btn-outline-primary mt-3">Baca Lebih Lanjut</a>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->
@@ -225,28 +223,29 @@
             </div><!--end row-->
 
             <div class="row">
+                @foreach ($berita as $item)
                 <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
                     <div class="card blog blog-primary rounded border-0 shadow overflow-hidden">
                         <div class="position-relative">
-                            <img src="{{ asset('assets/landing/images/1undhari/gedung.jpg') }}" class="card-img-top" alt="...">
+                            <img src="{{ asset('/storage/berita/'.$item->foto) }}" class="card-img-top" alt="...">
                             <div class="overlay rounded-top"></div>
                         </div>
                         <div class="card-body content">
-                            <h5><a href="berita-detail.html" class="card-title title text-dark">Judul Berita Fakultasl
-                                    Ilmu Komputer</a></h5>
+                            <h5><a href="berita-detail.html" class="card-title title text-dark">{{ $item->judul }}</a></h5>
                             <div class="post-meta d-flex justify-content-between mt-3">
-                                <a href="berita-detail.html" class="text-muted readmore">Read More <i
+                                <a href="{{ route('landing.berita.show', $item->id) }}" class="text-muted readmore">Read More <i
                                         class="uil uil-angle-right-b align-middle"></i></a>
                             </div>
                         </div>
                         <div class="author">
-                            <small class="user d-block"><i class="uil uil-user"></i> Nama Penulis</small>
-                            <small class="date"><i class="uil uil-calendar-alt"></i> TGL 25th June 2021</small>
+                            <small class="user d-block"><i class="uil uil-user"></i> {{ $item->User->nama }}</small>
+                            <small class="date"><i class="uil uil-calendar-alt"></i> {{ substr($item->created_at, 0, 10) }}</small>
                         </div>
                     </div>
                 </div><!--end col-->
+                @endforeach
                 <div class="col-12 mt-4 pt-2 text-center">
-                    <a href="berita.html" class="btn btn-primary">Berita Lainnya<i
+                    <a href="{{ route('landing.berita.index') }}" class="btn btn-primary">Berita Lainnya<i
                             class="uil uil-angle-right-b align-middle"></i></a>
                 </div>
             </div><!--end row-->
@@ -275,7 +274,7 @@
 
                             </div>
                             <div class="content pt-3">
-                                <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Firmansyah
+                                <h5 class="mb-0"><a href="{{ route('landing.dosen.index') }}" class="name text-dark">Firmansyah
                                         Putra</a></h5>
                                 <small class="designation text-muted">Dekan Filkom</small>
                             </div>
@@ -291,7 +290,7 @@
                                     class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
                             </div>
                             <div class="content pt-3">
-                                <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Asril</a></h5>
+                                <h5 class="mb-0"><a href="{{ route('landing.dosen.index') }}" class="name text-dark">Asril</a></h5>
                                 <small class="designation text-muted">Wakil Dekan Filkom</small>
                             </div>
                         </div>
@@ -304,23 +303,9 @@
                             <div class="position-relative">
                                 <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}"
                                     class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
-                                <ul class="list-unstyled mb-0 team-icon">
-                                    <li class="list-inline-item"><a href="javascript:void(0)"
-                                            class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="facebook"
-                                                class="icons"></i></a></li>
-                                    <li class="list-inline-item"><a href="javascript:void(0)"
-                                            class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="instagram"
-                                                class="icons"></i></a></li>
-                                    <li class="list-inline-item"><a href="javascript:void(0)"
-                                            class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="twitter"
-                                                class="icons"></i></a></li>
-                                    <li class="list-inline-item"><a href="javascript:void(0)"
-                                            class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="linkedin"
-                                                class="icons"></i></a></li>
-                                </ul><!--end icon-->
                             </div>
                             <div class="content pt-3">
-                                <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Lido Sabda
+                                <h5 class="mb-0"><a href="{{ route('landing.dosen.index') }}" class="name text-dark">Lido Sabda
                                         Lesmana</a></h5>
                                 <small class="designation text-muted">Kaprodi Teknik Informatika</small>
                             </div>
@@ -336,7 +321,7 @@
                                     class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
                             </div>
                             <div class="content pt-3">
-                                <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Elinda Revita</a>
+                                <h5 class="mb-0"><a href="{{ route('landing.dosen.index') }}" class="name text-dark">Elinda Revita</a>
                                 </h5>
                                 <small class="designation text-muted">Kaprodi Sistem Informasi</small>
                             </div>
@@ -467,7 +452,7 @@
             </div><!--end row-->
 
             <div class="col-12 mt-4 pt-2 text-center">
-                <a href="javascript:void(0)" class="btn btn-primary">Gabung dan Daftar<i
+                <a href="{{ route('landing.pendaftaran.index') }}" class="btn btn-primary">Gabung dan Daftar<i
                         class="uil uil-angle-right-b align-middle"></i></a>
             </div>
         </div><!--end col-->

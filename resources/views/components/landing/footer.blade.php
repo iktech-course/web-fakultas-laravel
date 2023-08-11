@@ -86,21 +86,21 @@
                          <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                              <h5 class="footer-head">Filkom</h5>
                              <ul class="list-unstyled footer-list mt-4">
-                                 <li><a href="javascript:void(0)" class="text-foot"><i
+                                 <li><a href="{{ route('landing.beranda') }}" class="text-foot"><i
                                              class="uil uil-angle-right-b me-1"></i> Beranda</a></li>
-                                 <li><a href="javascript:void(0)" class="text-foot"><i
+                                 <li><a href="{{ route('landing.profil.index') }}" class="text-foot"><i
                                              class="uil uil-angle-right-b me-1"></i> Profil Fakultas</a></li>
-                                 <li><a href="javascript:void(0)" class="text-foot"><i
+                                 <li><a href="{{ route('landing.prodi.index') }}" class="text-foot"><i
                                              class="uil uil-angle-right-b me-1"></i> Prodi</a></li>
-                                 <li><a href="javascript:void(0)" class="text-foot"><i
+                                 <li><a href="{{ route('landing.dosen.index') }}" class="text-foot"><i
                                              class="uil uil-angle-right-b me-1"></i> Dosen</a></li>
-                                 <li><a href="javascript:void(0)" class="text-foot"><i
+                                 <li><a href="{{ route('landing.kegiatan.index') }}" class="text-foot"><i
                                              class="uil uil-angle-right-b me-1"></i> Kegiatan Akademik</a></li>
-                                 <li><a href="javascript:void(0)" class="text-foot"><i
+                                 <li><a href="{{ route('landing.berita.index') }}" class="text-foot"><i
                                              class="uil uil-angle-right-b me-1"></i> Berita</a></li>
-                                 <li><a href="javascript:void(0)" class="text-foot"><i
+                                 <li><a href="{{ route('landing.pendaftaran.index') }}" class="text-foot"><i
                                              class="uil uil-angle-right-b me-1"></i> Pendaftaran/a></li>
-                                 <li><a href="javascript:void(0)" class="text-foot"><i
+                                 <li><a href="{{ route('landing.kontak.index') }}" class="text-foot"><i
                                              class="uil uil-angle-right-b me-1"></i> Kontak</a></li>
                              </ul>
                          </div><!--end col-->
@@ -108,11 +108,11 @@
                          <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                              <h5 class="footer-head">Seputar Undhari</h5>
                              <ul class="list-unstyled footer-list mt-4">
-                                 <li><a href="https://undhari.ac.id/web/" class="text-foot"><i
+                                 <li><a href="https://undhari.ac.id/web/" class="text-foot" target="_blank"><i
                                              class="uil uil-angle-right-b me-1"></i> Website Official Undhari</a></li>
-                                 <li><a href="https://akademik.undhari.ac.id/" class="text-foot"><i
+                                 <li><a href="https://akademik.undhari.ac.id/" class="text-foot" target="_blank"><i
                                              class="uil uil-angle-right-b me-1"></i> Sistem Akademik</a></li>
-                                 <li><a href="https://gemaundhari.com/" class="text-foot"><i
+                                 <li><a href="https://gemaundhari.com/" class="text-foot" target="_blank"><i
                                              class="uil uil-angle-right-b me-1"></i> Gema Undhari</a></li>
                              </ul>
                          </div><!--end col-->

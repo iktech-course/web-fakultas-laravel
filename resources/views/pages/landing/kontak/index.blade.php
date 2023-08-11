@@ -33,7 +33,7 @@
                             <h5 class="fw-bold">Telephone</h5>
                             <p class="text-muted">Hubungi operator untuk informasi lebih lanjut mengenai Fakultas Ilmu
                                 Komputer</p>
-                            <a href="https://wa.me/6281277159091" class="read-more">+62 812-7715-9091</a>
+                            <a href="https://wa.me/6281277159091" class="read-more" target="_blank">+62 812-7715-9091</a>
                         </div>
                     </div>
                 </div><!--end col-->
@@ -47,7 +47,7 @@
                             <h5 class="fw-bold">Email</h5>
                             <p class="text-muted">Hubungi operator untuk informasi lebih lanjut mengenai Fakultas Ilmu
                                 Komputer</p>
-                            <a href="mailto:contact@example.com" class="read-more">filkom@undhari.ac.id</a>
+                            <a href="mailto:contact@example.com" class="read-more" target="">filkom@undhari.ac.id</a>
                         </div>
                     </div>
                 </div><!--end col-->
@@ -76,7 +76,8 @@
                         <div class="card-body py-5">
                             <h4 class="card-title">Tulis Pesan Disini</h4>
                             <div class="custom-form mt-3">
-                                <form method="post" name="myForm" id="myForm" onsubmit="return validateForm()">
+                                <form action="{{ route('pesan.store') }}" method="post" name="myForm" id="myForm">
+                                    @csrf
                                     <p id="error-msg" class="mb-0"></p>
                                     <div id="simple-msg"></div>
                                     <div class="row">
@@ -85,7 +86,7 @@
                                                 <label class="form-label">Nama <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <i data-feather="user" class="fea icon-sm icons"></i>
-                                                    <input name="name" id="name" type="text"
+                                                    <input name="nama" id="name" type="text"
                                                         class="form-control ps-5" placeholder="Nama :">
                                                 </div>
                                             </div>
@@ -108,7 +109,7 @@
                                                         class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <i data-feather="book" class="fea icon-sm icons"></i>
-                                                    <input name="subject" id="subject" class="form-control ps-5"
+                                                    <input name="no_wa" id="subject" class="form-control ps-5"
                                                         placeholder=" +628 :">
                                                 </div>
                                             </div>
@@ -119,7 +120,7 @@
                                                 <label class="form-label">Pesan <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <i data-feather="message-circle" class="fea icon-sm icons clearfix"></i>
-                                                    <textarea name="comments" id="comments" rows="4" class="form-control ps-5" placeholder="Isi Pesan :"></textarea>
+                                                    <textarea name="pesan" id="comments" rows="4" class="form-control ps-5" placeholder="Isi Pesan :"></textarea>
                                                 </div>
                                             </div>
                                         </div>
