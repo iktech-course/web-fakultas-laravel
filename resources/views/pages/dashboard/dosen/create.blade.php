@@ -17,6 +17,7 @@
                         <div class="col-sm-12">
                             <label for="firstName" class="form-label">Nama Dosen</label>
                             <input type="text" class="form-control" name="nama" id="firstName" placeholder="Nama Dosen" value=""
+                            <input type="text" class="form-control" id="firstName" name="nama" placeholder="Nama Dosen" value=""
                                 required>
                             <div class="invalid-feedback">
                                 Nama Dosen Harus Terisi

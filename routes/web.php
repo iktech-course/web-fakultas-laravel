@@ -40,7 +40,7 @@ Route::get('/', function () {
 })->name('landing.beranda');
 
 Route::get('/berita', [BeritaController::class, 'index'])->name('landing.berita.index');
-Route::get('/berita-detail', [BeritaController::class, 'show'])->name('landing.berita.show');
+Route::get('/berita-detail/{id}', [BeritaController::class, 'show'])->name('landing.berita.show');
 Route::get('/fasilitas', [FasilitasController::class, 'index'])->name('landing.fasilitas.index');
 Route::get('/pendaftaran', [PendaftaranController::class, 'index'])->name('landing.pendaftaran.index');
 Route::get('/kontak', [KontakController::class, 'index'])->name('landing.kontak.index');
