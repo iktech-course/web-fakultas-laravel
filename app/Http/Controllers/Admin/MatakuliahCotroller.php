@@ -14,8 +14,9 @@ class MatakuliahCotroller extends Controller
      */
     public function index()
     {
-        //
-        return view('pages.dashboard.matakuliah.index');
+        $matakuliah = MataKuliah::paginate(5);
+
+        return view('pages.dashboard.matakuliah.index', compact('matakuliah'));
     }
 
     /**
@@ -90,11 +91,11 @@ class MatakuliahCotroller extends Controller
         $matakuliah = MataKuliah::findOrFail($id);
 
         $matakuliah->update([
-            'kode_mk' =>'required',
-            'nama_mk' =>'required',
-            'semester' =>'required',
-            'sks'=> 'required',
-            'program_studi' => 'required'
+            'kode_mk' =>$request->input('kode_mk'),
+            'nama_mk' =>$request->input('nama_mk'),
+            'semester' =>$request->input('semester'),
+            'sks'=> $request->input('sks'),
+            'program_studi' => $request->input('program_studi')
         ]);
 
         return redirect()->route('matakuliah.index');
