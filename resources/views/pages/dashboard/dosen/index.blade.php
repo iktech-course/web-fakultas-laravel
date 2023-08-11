@@ -30,6 +30,7 @@
                             <tr>
                                 <th class="border-bottom p-3">No</th>
                                 <th class="border-bottom p-3" style="max-width: 220px;">Foto</th>
+                                <th class="text-center border-bottom p-3">NIDN</th>
                                 <th class="text-center border-bottom p-3">Nama Dosen</th>
                                 <th class="text-center border-bottom p-3">Jabatan</th>
                                 <th class="text-center border-bottom p-3">Program Studi</th>
@@ -37,59 +38,33 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Start -->
-                            <tr>
-                                <th class="p-3">1</th>
-                                <td style="width: 50px;">
-                                    <img src="assets/images/client/01.jpg" class="w-100" alt="">
-                                </td>
-                                <td class="text-center p-3">Firmansyah Putra, S.Kom, M.Pd.T</td>
-                                <td class="text-center p-3">Dekan</td>
-                                <td class="text-center p-3">Sistem Informasi</td>
-                                <td class="text-center p-3">
-                                    <a href="{{ route('dosen.show',1) }}" class="btn btn-sm btn-primary">Detail</a>
-                                    <a href="#" class="btn btn-sm btn-warning">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-soft-danger ms-2">Hapus</a>
-                                </td>
-                            </tr>
-                            <!-- End -->
-                             <!-- Start -->
-                             <tr>
-                                <th class="p-3">2</th>
-                                <td style="width: 50px;">
-                                    <img src="assets/images/client/02.jpg" class="w-100" alt="">
-                                </td>
-                                <td class="text-center p-3">Elinda Revita M.Kom</td>
-                                <td class="text-center p-3">Kaprodi</td>
-                                <td class="text-center p-3">Sistem Informasi</td>
-                                <td class="text-center p-3">
-                                    <a href="#" class="btn btn-sm btn-primary">Detail</a>
-                                    <a href="#" class="btn btn-sm btn-warning">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-soft-danger ms-2">Hapus</a>
-                                </td>
-                            </tr>
-                            <!-- End -->
+                            @foreach ($dosen as $no => $item)
+                                 <!-- Start -->
+                                <tr>
+                                    <th class="p-3">{{ ++$no + ($dosen->currentPage()-1) * $dosen->perPage() }}</th>
+                                    <td style="width: 50px;">
+                                        <img src="{{ asset('/storage/dosen/'.$item->foto ) }}" class="w-100" alt="">
+                                    </td>
+                                    <td class="text-center p-3">{{ $item->nidn }}</td>
+                                    <td class="text-center p-3">{{ $item->nama }}</td>
+                                    <td class="text-center p-3">{{ $item->jabatan_struktural }}</td>
+                                    <td class="text-center p-3">{{ $item->program_studi }}</td>
+                                    <td class="text-center p-3">
+                                        <a href="{{ route('dosen.show',$item->id) }}" class="btn btn-sm btn-primary">Detail</a>
+                                        <a href="{{ route('dosen.edit',$item->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                        <a href="#" class="btn btn-sm btn-soft-danger ms-2">Hapus</a>
+                                    </td>
+                                </tr>
+                                <!-- End -->
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div><!--end col-->
         </div><!--end row-->
 
-        <div class="row text-center">
-            <!-- PAGINATION START -->
-            <div class="col-12 mt-4">
-                <div class="d-md-flex align-items-center text-center justify-content-between">
-                    <span class="text-muted me-3">Showing 1 - 10 out of 50</span>
-                    <ul class="pagination mb-0 justify-content-center mt-4 mt-sm-0">
-                        <li class="page-item"><a class="page-link" href="javascript:void(0)" aria-label="Previous">Prev</a></li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#" aria-label="Next">Next</a></li>
-                     </ul>
-                </div>
-            </div><!--end col-->
-            <!-- PAGINATION END -->
+        <div class="row text-end mt-3">
+            {{ $dosen->links('vendor.pagination.bootstrap-5') }}
         </div><!--end row-->
     </div>
 </div><!--end container-->

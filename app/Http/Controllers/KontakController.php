@@ -10,4 +10,9 @@ class KontakController extends Controller
     {
         return view('pages.landing.kontak.index');
     }
+
+    public function store()
+    {
+        
+    }
 }
