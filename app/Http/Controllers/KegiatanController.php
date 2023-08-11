@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\KegiatanAkademik;
 use Illuminate\Http\Request;
 
 class KegiatanController extends Controller
@@ -9,12 +10,14 @@ class KegiatanController extends Controller
     //
     public function index()
     {
-        return view('pages.landing.kegiatan-akademik.index');
+        $kegiatan = KegiatanAkademik::paginate(5);
+        return view('pages.landing.kegiatan-akademik.index', compact('kegiatan'));
     }
 
-    public function show()
+    public function show($id)
     {
-        return view('pages.landing.kegiatan-akademik.show');
+        $kegiatan = KegiatanAkademik::findOrFail($id);
+        return view('pages.landing.kegiatan-akademik.show',compact('kegiatan'));
     }
 
 }

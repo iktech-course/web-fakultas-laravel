@@ -2,17 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Berita;
 use Illuminate\Http\Request;
 
 class BeritaController extends Controller
 {
     public function index()
     {
-        return view('pages.landing.berita.index');
+        $berita = Berita::with('user')->paginate(5);
+
+        return view('pages.landing.berita.index', compact('berita'));
     }
 
-    public function show()
+    public function show($id)
     {
-        return view('pages.landing.berita.show');   
+        $berita = Berita::findOrFail($id);
+        return view('pages.landing.berita.show', compact('berita'));   
     }
 }

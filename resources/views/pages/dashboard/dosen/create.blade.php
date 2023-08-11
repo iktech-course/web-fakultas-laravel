@@ -15,7 +15,7 @@
                     <div class="row g-3">
                         <div class="col-sm-12">
                             <label for="firstName" class="form-label">Nama Dosen</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="Nama Dosen" value=""
+                            <input type="text" class="form-control" id="firstName" name="nama" placeholder="Nama Dosen" value=""
                                 required>
                             <div class="invalid-feedback">
                                 Nama Dosen Harus Terisi
@@ -24,7 +24,7 @@
 
                         <div class="col-sm-12">
                             <label for="firstName" class="form-label">NIDN</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="NIDN Dosen" value=""
+                            <input type="text" class="form-control" id="firstName" placeholder="NIDN Dosen" name="nidn" value=""
                                 required>
                             <div class="invalid-feedback">
                                 NIDN Dosen Harus Terisi
