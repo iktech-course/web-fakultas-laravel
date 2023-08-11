@@ -55,6 +55,7 @@ Route::get('/prodi/ti', [ProdiController::class, 'show_ti'])->name('landing.prod
 Route::get("/prodi/si", [ProdiController::class, 'show_si'])->name('landing.prodi.show-si');
 Route::get('/kegiatan-a' ,[KegiatanController::class, 'index'])->name('landing.kegiatan.index');
 Route::get('/kegiatan-s' ,[KegiatanController::class, 'show'])->name('landing.kegiatan.show');
+Route::post('/kontak', [KontakController::class, 'store'])->name('landing.kontak.store');
 
 
 
