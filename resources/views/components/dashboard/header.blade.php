@@ -2,7 +2,7 @@
     <div class="header-bar d-flex justify-content-between">
         <div class="d-flex align-items-center">
             <a href="#" class="logo-icon me-3">
-                <img src="{{ asset('assets/dashboard/images/logo-icon.png') }}" height="30" class="small"
+                <img src="{{ asset('assets/landing/images/logoico.ico') }}" height="30" class="small"
                     alt="">
                 <span class="big">
                     <img src="{{ asset('assets/dashboard/images/logo2-light.png') }}" height="24"

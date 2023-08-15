@@ -1,4 +1,4 @@
-        <link rel="shortcut icon" href="assets/images/favicon.ico" />
+        <link rel="shortcut icon" href={{ asset('assets/landing/images/logoico.ico') }} />
         <!-- Css -->
         <link href="{{ asset('assets/dashboard/libs/simplebar/simplebar.min.css') }}" rel="stylesheet">
         <!-- Bootstrap Css -->

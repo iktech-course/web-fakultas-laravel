@@ -14,7 +14,7 @@ class MatakuliahCotroller extends Controller
      */
     public function index()
     {
-        $matakuliah = MataKuliah::paginate(5);
+        $matakuliah = MataKuliah::paginate(10);
 
         return view('pages.dashboard.matakuliah.index', compact('matakuliah'));
     }

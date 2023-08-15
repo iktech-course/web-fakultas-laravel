@@ -76,7 +76,7 @@
                         <div class="card-body py-5">
                             <h4 class="card-title">Tulis Pesan Disini</h4>
                             <div class="custom-form mt-3">
-                                <form action="{{ route('pesan.store') }}" method="post" name="myForm" id="myForm">
+                                <form action="{{ route('landing.kontak.store') }}" method="post" name="myForm" id="myForm">
                                     @csrf
                                     <p id="error-msg" class="mb-0"></p>
                                     <div id="simple-msg"></div>
