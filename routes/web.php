@@ -8,18 +8,20 @@ use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\LandingController;
+use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\PendaftaranController;
-use App\Http\Controllers\Admin\BeritaController as AdminBeritaController;
-use App\Http\Controllers\Admin\DosenController as AdminDosenController;
-use App\Http\Controllers\Admin\MatakuliahCotroller as AdminMatakuliah;
-use App\Http\Controllers\KegiatanController;
-use App\Http\Controllers\Admin\KegiatanController as AdminKegiatanContoller;
-use App\Http\Controllers\Admin\PesanController as AdminPesanController;
+use App\Http\Controllers\Admin\PublikasiController;
+use App\Http\Controllers\Admin\MKPengampuController;
 use App\Http\Controllers\Admin\UserCotroller as AdminUserContoller;
+use App\Http\Controllers\Admin\MatakuliahCotroller as AdminMatakuliah;
+use App\Http\Controllers\Admin\DosenController as AdminDosenController;
+use App\Http\Controllers\Admin\PesanController as AdminPesanController;
+use App\Http\Controllers\Admin\BeritaController as AdminBeritaController;
 use App\Http\Controllers\Admin\KontakController as AdminKontakController;
-use App\Http\Controllers\LandingController;
+use App\Http\Controllers\Admin\KegiatanController as AdminKegiatanContoller;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,5 +76,8 @@ Route::prefix('admin')->group(function () {
     Route::resource('pesan', AdminPesanController::class);
     Route::resource('user', AdminUserContoller::class);
     Route::resource('kontak', AdminKontakController::class);
+    Route::resource('mkpengampu', MKPengampuController::class);
+    Route::resource('publikasi', PublikasiController::class);
+
 });
 
