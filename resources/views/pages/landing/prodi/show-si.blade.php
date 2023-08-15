@@ -181,7 +181,7 @@
                                                     </tbody>
                                                 </table>
                                             </div>
-                                        </div><!--end col-->
+                                        </div><!--end col 1-->
         
                                         <div class="col-md-6 mt-4 pt-2">
                                             <h5 class="mb-0">Semester 2</h5>
@@ -206,113 +206,178 @@
                                                             </th>
                                                             <td class="p-0 text-center">Bahasa Inggris</span></td>
                                                             <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT102</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Paket Program Niaga</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT103</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Matematika Diskrit</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">TIF101</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Algoritma dan Pemrograman</span></td>
-                                                            <td class="p-2 text-center">3</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">TIF102</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Elektronik Dasar</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">TIF103</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Kalkulus</span></td>
-                                                            <td class="p-2 text-center">3</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">TIF104</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Pengantar Teknologi Informasi</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">UND101</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Agama</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">UND102</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Kewarganegaraan</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">UND103</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Bahasa Indonesia</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">UND104</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Pengenmabangan Karakter Berakhlak Mulia</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
-                                        </div><!--end col-->
-                                    </div><!--end row-->   
-                                     
+                                        </div><!--end col 2-->  
+
+                                        <div class="col-md-6 mt-4 pt-2">
+                                            <h5 class="mb-0">Semester 3</h5>
+        
+                                            <div class="table-responsive bg-white shadow rounded mt-4">
+                                                <table class="table mb-0 table-center">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">Kode MK</th>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">Mata Kuliah</th>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">SKS</th>
+                                                        </tr>
+                                                    </thead>
+                    
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="text-center">
+                                                                <div class="align-items-center">
+                                                                    <i class="uil uil-notes h6 text-primary"></i>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                </div>
+                                                            </th>
+                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
+                                                            <td class="p-2 text-center">2</td>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div><!--end col 3-->
+
+                                        <div class="col-md-6 mt-4 pt-2">
+                                            <h5 class="mb-0">Semester 4</h5>
+        
+                                            <div class="table-responsive bg-white shadow rounded mt-4">
+                                                <table class="table mb-0 table-center">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">Kode MK</th>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">Mata Kuliah</th>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">SKS</th>
+                                                        </tr>
+                                                    </thead>
+                    
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="text-center">
+                                                                <div class="align-items-center">
+                                                                    <i class="uil uil-notes h6 text-primary"></i>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                </div>
+                                                            </th>
+                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
+                                                            <td class="p-2 text-center">2</td>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div><!--end col 4-->
+
+                                        <div class="col-md-6 mt-4 pt-2">
+                                            <h5 class="mb-0">Semester 5</h5>
+        
+                                            <div class="table-responsive bg-white shadow rounded mt-4">
+                                                <table class="table mb-0 table-center">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">Kode MK</th>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">Mata Kuliah</th>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">SKS</th>
+                                                        </tr>
+                                                    </thead>
+                    
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="text-center">
+                                                                <div class="align-items-center">
+                                                                    <i class="uil uil-notes h6 text-primary"></i>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                </div>
+                                                            </th>
+                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
+                                                            <td class="p-2 text-center">2</td>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div><!--end col 5-->
+
+                                        <div class="col-md-6 mt-4 pt-2">
+                                            <h5 class="mb-0">Semester 6</h5>
+        
+                                            <div class="table-responsive bg-white shadow rounded mt-4">
+                                                <table class="table mb-0 table-center">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">Kode MK</th>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">Mata Kuliah</th>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">SKS</th>
+                                                        </tr>
+                                                    </thead>
+                    
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="text-center">
+                                                                <div class="align-items-center">
+                                                                    <i class="uil uil-notes h6 text-primary"></i>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                </div>
+                                                            </th>
+                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
+                                                            <td class="p-2 text-center">2</td>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div><!--end col 6-->
+
+                                        <div class="col-md-6 mt-4 pt-2">
+                                            <h5 class="mb-0">Semester 7</h5>
+        
+                                            <div class="table-responsive bg-white shadow rounded mt-4">
+                                                <table class="table mb-0 table-center">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">Kode MK</th>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">Mata Kuliah</th>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">SKS</th>
+                                                        </tr>
+                                                    </thead>
+                    
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="text-center">
+                                                                <div class="align-items-center">
+                                                                    <i class="uil uil-notes h6 text-primary"></i>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                </div>
+                                                            </th>
+                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
+                                                            <td class="p-2 text-center">2</td>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div><!--end col 7-->
+
+                                        <div class="col-md-6 mt-4 pt-2">
+                                            <h5 class="mb-0">Semester 8</h5>
+        
+                                            <div class="table-responsive bg-white shadow rounded mt-4">
+                                                <table class="table mb-0 table-center">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">Kode MK</th>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">Mata Kuliah</th>
+                                                            <th scope="col" class="fw-bold border-bottom text-primary py-4 px-3 text-center" style="min-width: 100px;">SKS</th>
+                                                        </tr>
+                                                    </thead>
+                    
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="text-center">
+                                                                <div class="align-items-center">
+                                                                    <i class="uil uil-notes h6 text-primary"></i>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                </div>
+                                                            </th>
+                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
+                                                            <td class="p-2 text-center">2</td>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div><!--end col 8-->
                                 </div>   
                                 </div>
         
@@ -323,7 +388,7 @@
                                         <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}" class="avatar avatar-medium rounded-pill" alt="">
         
                                         <div class="ms-md-3 mt-4 mt-sm-0">
-                                            <a href="javascript:void(0)" class="text-dark h5">Erlinda Revita</a>
+                                            <a href="{{ route('landing.dosen.index') }}" class="text-dark h5">Erlinda Revita</a>
                                             <p class="text-muted mb-0 mt-2">I have started my career as a trainee and prove my self and achieve all the milestone with good guidance and reach up to the project manager. In this journey, I understand all the procedure which make me a good developer, team leader, and a project manager.</p>
                                         </div>
                                     </div>
