@@ -63,7 +63,7 @@
                      <div class="row">
                          <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
                              <a href="#" class="logo-footer">
-                                 <img src="assets/images/1undhari/logo2-light.png" height="36" alt="">
+                                 <img src="{{ asset('assets/landing/images/1undhari/logo2-light.png') }}" height="36" alt="">
                              </a>
                              <p class="mt-4">Daftar dan Bergabung bersama kami, ciptakan karya terbaikmu dibidang
                                  teknologi.</p>

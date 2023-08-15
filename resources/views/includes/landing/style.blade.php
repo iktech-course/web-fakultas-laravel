@@ -1,5 +1,5 @@
 <!-- favicon -->
-<link rel="shortcut icon" href="{{ asset('assets/landing/images/favicon.ico') }}">
+<link rel="shortcut icon" href="{{ asset('assets/landing/images/logoico.ico') }}">
 <!-- Css -->
 <link href="{{ asset('assets/landing/libs/tiny-slider/tiny-slider.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/landing/libs/tobii/css/tobii.min.css') }}" rel="stylesheet">

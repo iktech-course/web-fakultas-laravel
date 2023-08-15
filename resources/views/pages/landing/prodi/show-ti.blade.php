@@ -68,116 +68,18 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($ti_1 as $item)
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
                                                         </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT102</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Paket Program Niaga</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT103</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Matematika Diskrit</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">TIF101</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Algoritma dan Pemrograman</span></td>
-                                                            <td class="p-2 text-center">3</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">TIF102</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Elektronik Dasar</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">TIF103</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Kalkulus</span></td>
-                                                            <td class="p-2 text-center">3</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">TIF104</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Pengantar Teknologi Informasi</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">UND101</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Agama</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">UND102</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Kewarganegaraan</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">UND103</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Bahasa Indonesia</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">UND104</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Pengenmabangan Karakter Berakhlak Mulia</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -197,15 +99,19 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($ti_2 as $item )
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                        </tr>      
+                                                        @endforeach
+
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -225,15 +131,18 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($ti_3 as $item)
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                        </tr>    
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -253,15 +162,18 @@
                                                     </thead>
                     
                                                     <tbody>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                       @foreach ($ti_4 as $item)
+                                                       <tr>
+                                                        <th class="text-center">
+                                                            <div class="align-items-center">
+                                                                <i class="uil uil-notes h6 text-primary"></i>
+                                                                <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
+                                                            </div>
+                                                        </th>
+                                                        <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                        <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                        </tr> 
+                                                       @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -281,15 +193,18 @@
                                                     </thead>
                     
                                                     <tbody>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                    @foreach ($ti_5 as $item)
+                                                    <tr>
+                                                        <th class="text-center">
+                                                            <div class="align-items-center">
+                                                                <i class="uil uil-notes h6 text-primary"></i>
+                                                                <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
+                                                            </div>
+                                                        </th>
+                                                        <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                        <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                    </tr>
+                                                    @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -309,15 +224,18 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($ti_6 as $item)
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                        </tr>
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -337,15 +255,18 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($ti_7 as $item)
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                        </tr>  
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -365,15 +286,18 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($ti_8 as $item)
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                        </tr>
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
