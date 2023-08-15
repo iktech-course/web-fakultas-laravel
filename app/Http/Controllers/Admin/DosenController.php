@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Dosen;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class DosenController extends Controller
 {
@@ -77,8 +78,8 @@ class DosenController extends Controller
      */
     public function show(string $id)
     {
-        //
-        return view('pages.dashboard.dosen.show');
+        $dosen = Dosen::findOrFail($id);
+        return view('pages.dashboard.dosen.show', compact('dosen'));
     }
 
     /**
@@ -86,7 +87,8 @@ class DosenController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $dosen = Dosen::findOrFail($id);
+        return view('pages.dashboard.dosen.edit', compact('dosen'));
     }
 
     /**
@@ -94,7 +96,55 @@ class DosenController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // Validasi Input
+        $this->validate($request,[
+            'nama'               => 'required',
+            'nidn'               => 'required',
+            'foto'               => 'image|mimes:png,jpg,jpeg|max:2000',
+            'jabatan_fungsional' => 'required',
+            'jabatan_struktural' => 'required',
+            'program_studi'      => 'required',
+            'no_wa'              => 'required',
+            'deskripsi'          => 'required'
+        ]);
+
+        // Ambil Data Dosen
+        $dosen = Dosen::findOrFail($id);
+
+        if ($request->hasFile('foto'))
+        {
+            // Upload Foto
+            $foto = $request->file('foto');
+            $foto->storeAs('public/dosen', $foto->hashName());
+
+            // Hapus Gambar Lama
+            Storage::delete('public/dosen', $dosen->foto);
+
+            // Simpan Data Dosen
+            $dosen->update([
+                'nama' => $request->input('nama'),
+                'nidn' => $request->input('nidn'),
+                'foto' => $foto->hashName(),
+                'jabatan_fungsional' => $request->input('jabatan_fungsional'),
+                'jabatan_struktural' => $request->input('jabatan_struktural'),
+                'program_studi' => $request->input('program_studi'),
+                'no_wa' => $request->input('no_wa'),
+                'deskripsi' => $request->input('deskripsi'),
+            ]);
+        }
+        else {
+            $dosen->update([
+                'nama' => $request->input('nama'),
+                'nidn' => $request->input('nidn'),
+                'jabatan_fungsional' => $request->input('jabatan_fungsional'),
+                'jabatan_struktural' => $request->input('jabatan_struktural'),
+                'program_studi' => $request->input('program_studi'),
+                'no_wa' => $request->input('no_wa'),
+                'deskripsi' => $request->input('deskripsi'),
+            ]);
+        }
+
+        return redirect()->route('dosen.index');
     }
 
     /**
@@ -102,6 +152,16 @@ class DosenController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+         // Ambil data Berita
+         $dosen = Dosen::findOrFail($id);
+
+         // Hapus Gambar
+         Storage::delete('public/dosen', $dosen->foto);
+ 
+         // Hapus dosen
+         $dosen->delete();
+ 
+         // Kembali Ke Halaman dosen Index
+         return redirect()->route('dosen.index');
     }
 }

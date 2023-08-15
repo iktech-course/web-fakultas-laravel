@@ -15,42 +15,39 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-4">
-                            <img src="assets/images/client/01.jpg" class="w-100" width="300px" height="300px">
+                            <img src="{{ asset('/storage/dosen/'.$dosen->foto ) }}" class="w-100" width="300px" height="300px">
                         </div>
                         <div class="col-8">
                             <div class="row">
                                 <div class="col">
                                     <div class="mb-3">
                                         <div class="fw-bold text-muted">Nama Dosen</div>
-                                        <div class="text-black">Lido Sabda Lesmana, M.Kom</div>
+                                        <div class="text-black">{{ $dosen->nama }}</div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="fw-bold text-muted">Jabatan Struktural</div>
-                                        <div class="text-black">Kepala Program Studi</div>
+                                        <div class="text-black">{{ $dosen->jabatan_struktural }}</div>
                                     </div>
                                     <div class="mb-3">
-                                        <div class="fw-bold text-muted">Jenis Kelamin</div>
-                                        <div class="text-black">Laki - Laki</div>
+                                        <div class="fw-bold text-muted">Jabatan Fungsional</div>
+                                        <div class="text-black">{{ $dosen->jabatan_fungsional }}</div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="mb-3">
                                         <div class="fw-bold text-muted">NIDN</div>
-                                        <div class="text-black">1028058801</div>
+                                        <div class="text-black">{{ $dosen->nidn }}</div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="fw-bold text-muted">Program Studi</div>
-                                        <div class="text-black">Teknik Informatika</div>
+                                        <div class="text-black">{{ $dosen->program_studi }}</div>
                                     </div>
-                                    <div class="mb-3">
-                                        <div class="fw-bold text-muted">Jabatan Fungsional</div>
-                                        <div class="text-black">Lektor</div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="fw-bold text-muted">Deskripsi</div>
-                                <div class="text-black">Seorang Dosen yang menjabat sebagai kepala program studi S1 Teknik informatika dengan keahlian yakni kecerdasan buatan, Rekayasa Perangkat Lunak, Dan Jaringan Komputer</div>
+                                <div class="text-black">{!! $dosen->deskripsi !!}</div>
                             </div>
                         </div>
                     </div>
