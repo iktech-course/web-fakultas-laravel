@@ -29,6 +29,10 @@
                                         <div class="text-black">{{ $dosen->jabatan_struktural }}</div>
                                     </div>
                                     <div class="mb-3">
+                                        <div class="fw-bold text-muted">Status Ikatan Kerja</div>
+                                        <div class="text-black">Dosen {{ $dosen->ikatan_kerja }}</div>
+                                    </div>
+                                    <div class="mb-3">
                                         <div class="fw-bold text-muted">Jabatan Fungsional</div>
                                         <div class="text-black">{{ $dosen->jabatan_fungsional }}</div>
                                     </div>

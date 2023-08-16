@@ -53,6 +53,15 @@
                         </div>
 
                         <div class="col-sm-12">
+                            <label for="firstName" class="form-label">Ikatan Kerja</label>
+                            <select class="form-select form-control" name="ikatan_kerja" aria-label="Default select example">
+                                <option selected>Pilih Status Ikatan Kerja</option>
+                                <option value="Tetap" @if ($dosen->ikatan_kerja == "Tetap") selected @endif>Tetap</option>
+                                <option value="Tidak Tetap" @if ($dosen->ikatan_kerja == "Tidak Tetap") selected @endif>Tidak Tetap</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-12">
                             <label for="firstName" class="form-label">Jabatan Struktural</label>
                             <select class="form-select form-control" name="jabatan_struktural" aria-label="Default select example">
                                 <option selected>Pilih Jabatan Struktural</option>
