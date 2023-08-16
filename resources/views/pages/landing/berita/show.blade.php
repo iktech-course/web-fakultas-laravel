@@ -25,7 +25,7 @@
             <div class="container">
                 <div class="row">
                     <!-- BLog Start -->
-                    <div class="col-lg-8 col-md-6">
+                    <div class="col-lg-12 col-md-6">
                         <div class="me-lg-5">                                
                             <ul class="list-unstyled d-flex justify-content-between mt-4">
                                 <li class="list-inline-item user me-2"><a href="javascript:void(0)" class="text-muted"><i class="uil uil-user text-dark"></i> {{ $berita->User->nama }}</a></li>
@@ -38,7 +38,7 @@
 
                             <p class="text-muted">{!! $berita->isi !!}</p>
 
-                            <h5 class="mt-4">Komentar :</h5>
+                            {{-- <h5 class="mt-4">Komentar :</h5>
 
                             <ul class="media-list list-unstyled mb-0">
                                 <li class="mt-4">
@@ -99,33 +99,36 @@
                                         </div>
                                     </div><!--end col-->
                                 </div><!--end row-->
-                            </form><!--end form-->
+                            </form><!--end form--> --}}
                         </div>
                     </div><!--end col-->
                     <!-- BLog End -->
 
                     <!-- START SIDEBAR -->
-                    <div class="col-lg-4 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    {{-- <div class="col-lg-4 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0"> --}}
                         <div class="card border-0 sidebar sticky-bar rounded shadow">
                             <div class="card-body">
     
                                 <!-- RECENT POST -->
-                                <div class="widget mb-4 pb-2">
+                                {{-- <div class="widget mb-4 pb-2">
                                     <h5 class="widget-title">Postinga Lainnya</h5>
+                                    @foreach ($berita as $item)
                                     <div class="mt-4">
                                         <div class="d-flex align-items-center">
-                                            <img src="{{ asset('assets/landing/images/1undhari/wisudawan.jpg') }}" class="avatar avatar-small rounded" style="width: auto;" alt="">
+                                            <img src="{{ asset('storage/dosen/'.$berita->foto) }}" class="avatar avatar-small rounded" style="width: auto;" alt="">
                                             <div class="flex-1 ms-3">
-                                                <a href="javascript:void(0)" class="d-block title text-dark">Julul Postingan</a>
-                                                <span class="text-muted"> Waktu: 15th April 2021</span>
+                                                <a href="javascript:void(0)" class="d-block title text-dark">{{ $item->judul }}</a>
+                                                <span class="text-muted"> {{ substr($berita->created_at, 0, 10) }}</span>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                        
+                                    @endforeach
+                                </div> --}}
                                 <!-- RECENT POST -->
                                 
                                 <!-- SOCIAL -->
-                                <div class="widget">
+                                {{-- <div class="widget">
                                     <h5 class="widget-title">Follow us</h5>
                                     <ul class="list-unstyled social-icon social mb-0 mt-4">
                                         <li class="list-inline-item"><a href="https://www.facebook.com/" class="rounded"><i data-feather="facebook" class="fea icon-sm fea-social"></i></a></li>
@@ -134,7 +137,7 @@
                                         <li class="list-inline-item"><a href="https://www.gmail.com/" class="rounded"><i class="uil uil-envelope" title="email" class="fea icon-sm fea-social"></i></a></li>
                                     </ul><!--end icon-->
                                 </div>
-                                <!-- SOCIAL -->
+                                <!-- SOCIAL --> --}}
                             </div>
                         </div>
                     </div><!--end col-->

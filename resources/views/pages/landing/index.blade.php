@@ -231,7 +231,7 @@
                             <div class="overlay rounded-top"></div>
                         </div>
                         <div class="card-body content">
-                            <h5><a href="berita-detail.html" class="card-title title text-dark">{{ $item->judul }}</a></h5>
+                            <h5><a href="{{ route('landing.berita.show', $item->id) }}" class="card-title title text-dark">{{ $item->judul }}</a></h5>
                             <div class="post-meta d-flex justify-content-between mt-3">
                                 <a href="{{ route('landing.berita.show', $item->id) }}" class="text-muted readmore">Read More <i
                                         class="uil uil-angle-right-b align-middle"></i></a>

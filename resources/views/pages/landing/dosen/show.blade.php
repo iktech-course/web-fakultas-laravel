@@ -13,7 +13,7 @@
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col-lg-2 col-md-3 text-md-start text-center">
-                                    <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}"
+                                    <img src="{{ asset('storage/dosen/'.$dosen->foto) }}"
                                         class="avatar avatar-large rounded-circle shadow d-block mx-auto" alt="">
                                 </div><!--end col-->
                                 <div class="col-lg-10 col-md-9">
@@ -22,8 +22,7 @@
                                             <h3 class="title mb-0">{{ $dosen->nama }}</h3>
                                             <small class="text-muted h6 me-2">{{ $dosen->jabatan_struktural }}</small>
                                             <ul class="list-inline mb-0 mt-3">
-                                                <li class="list-item me-2 mb-0"><a href="https://wa.me/6281277159091"
-                                                        class="text-muted like"><i class="uil uil-whatsapp me-1"></i>{{ $dosen->no_wa }}</a></li>
+                                                <li class="list-item me-2 mb-0"><a href="https://wa.me/{{ $dosen->no_wa }}" target="_blank" class="text-muted like"><i class="uil uil-whatsapp me-1"></i>{{ $dosen->no_wa }}</a></li>
                                             </ul>
                                         </div><!--end col-->
                                     </div><!--end row-->
@@ -89,7 +88,7 @@
                 <div class="col-lg-8 col-sm-12">
                     <div class="border-bottom pb-4">
                         <h5 class="mx-2 mt-3">{{ $dosen->nama }}</h5>
-                        <p class="text-muted mb-0 mx-2 mt-3">{{ $dosen->deskripsi }}</p>
+                        <p class="text-muted mb-0 mx-2 mt-3">{!! $dosen->deskripsi !!}</p>
                     </div>   
 
                     <div class="col-lg-12 col-sm-12 mt-3">
@@ -112,22 +111,28 @@
                                                 <th scope="col"
                                                     class="fw-bold border-bottom text-primary py-4 px-3 text-center"
                                                     style="min-width: 100px;">Semester</th>
+                                                <th scope="col"
+                                                    class="fw-bold border-bottom text-primary py-4 px-3 text-center"
+                                                    style="min-width: 100px;">Prodi</th>    
                                             </tr>
                                         </thead>
 
                                         <tbody>
+                                            @foreach ($mkpengampu as $item)
                                             <tr>
                                                 <th class="text-center">
                                                     <div class="align-items-center">
                                                         <i class="uil uil-notes h6 text-primary"></i>
                                                         <p class="mb-0 d-inline fw-normal h6 ms-1"><a
-                                                                class="text-dark">TIF101</a></p>
+                                                                class="text-dark">{{ $item->MataKuliah->kode_mk }}</a></p>
                                                     </div>
                                                 </th>
-                                                <td class="p-0 text-center">Elektronika Dasar</span></td>
-                                                <td class="p-2 text-center">2</td>
-                                                <td class="p-0 text-center">Semester 2</td>
+                                                <td class="p-0 text-center">{{ $item->MataKuliah->nama_mk }}</span></td>
+                                                <td class="p-2 text-center">{{ $item->MataKuliah->sks }}</td>
+                                                <td class="p-0 text-center">Semester {{ $item->MataKuliah->semester }}</td>
+                                                <td class="p-0 text-center">{{ $item->Matakuliah->program_studi }}</td>
                                             </tr>  
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -158,23 +163,21 @@
                                             </thead>
 
                                             <tbody>
+                                                @foreach ($publikasi as $item)
                                                 <tr>
                                                     <th class="text-center">
                                                         <div class="align-items-center">
                                                             <i class="uil uil-book-open h6 text-primary"></i>
                                                             <p class="mb-0 d-inline fw-normal h6 ms-1"><a
-                                                                    class="text-dark"> Rancang Bangun Sistem Informasi
-                                                                    Lowongan Kerja Berbasis WEB</a></p>
+                                                                    class="text-dark"> {{ $item->judul }}</a></p>
                                                         </div>
                                                     </th>
-                                                    <td class="p-0 text-center">Jurnal Ilmiah Teknologi Informasi
-                                                        Asia</span></td>
-                                                    <td class="p-2 text-center">2021</td>
-                                                    <td class="p-0 text-center"><a
-                                                            href="https://scholar.google.co.id/citations?view_op=view_citation&hl=id&user=DRtE0YQAAAAJ&citation_for_view=DRtE0YQAAAAJ:_FxGoFyzp5QC" target="_blank" class="badge bg-primary">Link
-                                                            Jurnal</a>
+                                                    <td class="p-0 text-center">{{ $item->publisher }}</span></td>
+                                                    <td class="p-2 text-center">{{ $item->tahun }}</td>
+                                                    <td class="p-0 text-center"><a href="{{ $item->link }}" target="_blank" class="badge bg-primary">Link Jurnal</a>
                                                     </td>
-                                                </tr>
+                                                </tr>    
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>

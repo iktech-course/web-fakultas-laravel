@@ -35,7 +35,7 @@
                                     <img src="{{ asset('/storage/berita/'.$item->foto ) }}" class="w-100" alt="">
                                 </td>
                                 <td class="text-center p-3">{{ $item->judul }}</td>
-                                <td class="text-center p-3">{!! $item->isi !!}</td>
+                                <td class="text-center p-3">{!! substr($item->isi, 0, 50) !!}...</td>
                                 <td class="text-center p-3">
                                     <a href="{{ route('berita.edit', $item->id) }}" class="btn btn-sm btn-warning">Edit</a>
                                     <a href="#"  data-bs-toggle="modal" data-bs-target="#ConfirmModal-{{ $item->id }}" class="btn btn-sm btn-soft-danger ms-2">Hapus</a>

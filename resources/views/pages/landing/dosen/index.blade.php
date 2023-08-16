@@ -34,7 +34,7 @@
                     <div class="col-lg-3 col-md-6 mt-4 pt-2">
                         <div class="card team team-primary text-center border-0">
                             <div class="position-relative">
-                                <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}" class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
+                                <img src="{{ asset('storage/dosen/'.$item->foto) }}" class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
                             </div>
                             <div class="card-body py-3 px-0 content">
                                 <h5 class="mb-0"><a href="{{ route('landing.dosen.show', $item->id) }}" class="name text-dark">{{ $item->nama }}</a></h5>
