@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Dosen;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\MataKuliah;
+use App\Models\MKPengampu;
+use App\Models\Publikasi;
 use Illuminate\Support\Facades\Storage;
 
 class DosenController extends Controller
@@ -81,7 +84,10 @@ class DosenController extends Controller
     public function show(string $id)
     {
         $dosen = Dosen::findOrFail($id);
-        return view('pages.dashboard.dosen.show', compact('dosen'));
+        $matakuliah = MataKuliah::get();
+        $mk_pengampu = MKPengampu::with('matakuliah')->where('id_dosen', $id)->get();
+        $publikasi = Publikasi::where('id_dosen', $id)->get();
+        return view('pages.dashboard.dosen.show', compact('dosen', 'matakuliah', 'mk_pengampu', 'publikasi'));
     }
 
     /**

@@ -24,6 +24,6 @@ class MKPengampu extends Model
 
     public function MataKuliah(): BelongsTo
     {
-        return $this->belongsTo(MataKuliah::class);
+        return $this->belongsTo(MataKuliah::class, 'id_mk');
     }
 }

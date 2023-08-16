@@ -4,23 +4,24 @@
 
 @section('content')
 
-<div class="container-fluid">
-    <div class="layout-specing">
-        <div class="d-md-flex justify-content-between align-items-center">
-            <h5 class="mb-0">Daftar Dosen</h5>
+    <div class="container-fluid">
+        <div class="layout-specing">
+            <div class="d-md-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Daftar Dosen</h5>
 
-            <!-- <nav aria-label="breadcrumb" class="d-inline-block">
-                <ul class="breadcrumb bg-transparent rounded mb-0 p-0">
-                    <li class="breadcrumb-item text-capitalize"><a href="index.html">Landrick</a></li>
-                    <li class="breadcrumb-item text-capitalize"><a href="#">Invoice</a></li>
-                    <li class="breadcrumb-item text-capitalize active" aria-current="page">List</li>
-                </ul>
-            </nav> -->
-            <a href="{{ route('dosen.create') }}" class="btn btn-sm btn-success"><i data-feather="file-plus" class="fea icon-sm"> </i> Tambah Dosen</a>
-        </div>
-        <!-- <div class="row">
-            <a href="#" class=" my-3 mx-2 col-3 btn btn-success">Tambah Berita Baru</a>
-        </div> -->
+                <!-- <nav aria-label="breadcrumb" class="d-inline-block">
+                    <ul class="breadcrumb bg-transparent rounded mb-0 p-0">
+                        <li class="breadcrumb-item text-capitalize"><a href="index.html">Landrick</a></li>
+                        <li class="breadcrumb-item text-capitalize"><a href="#">Invoice</a></li>
+                        <li class="breadcrumb-item text-capitalize active" aria-current="page">List</li>
+                    </ul>
+                </nav> -->
+                <a href="{{ route('dosen.create') }}" class="btn btn-sm btn-success"><i data-feather="file-plus"
+                        class="fea icon-sm"> </i> Tambah Dosen</a>
+            </div>
+            <!-- <div class="row">
+                <a href="#" class=" my-3 mx-2 col-3 btn btn-success">Tambah Berita Baru</a>
+            </div> -->
 
         <div class="row">
             <div class="col-12 mt-4">
@@ -88,9 +89,9 @@
             </div><!--end col-->
         </div><!--end row-->
 
-        <div class="row text-end mt-3">
-            {{ $dosen->links('vendor.pagination.bootstrap-5') }}
-        </div><!--end row-->
-    </div>
-</div><!--end container-->
+            <div class="row text-end mt-3">
+                {{ $dosen->links('vendor.pagination.bootstrap-5') }}
+            </div><!--end row-->
+        </div>
+    </div><!--end container-->
 @endsection
