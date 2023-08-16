@@ -16,21 +16,18 @@
                                     <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}"
                                         class="avatar avatar-large rounded-circle shadow d-block mx-auto" alt="">
                                 </div><!--end col-->
-
                                 <div class="col-lg-10 col-md-9">
                                     <div class="row align-items-end">
                                         <div class="col-md-7 text-md-start text-center mt-4 mt-sm-0">
-                                            <h3 class="title mb-0">Lido Sabda Lesmana <span
-                                                    class="text-primary fw-bold">M.Kom</span></h3>
-                                            <small class="text-muted h6 me-2">Kaprodi Teknik Informatika</small>
+                                            <h3 class="title mb-0">{{ $dosen->nama }}</h3>
+                                            <small class="text-muted h6 me-2">{{ $dosen->jabatan_struktural }}</small>
                                             <ul class="list-inline mb-0 mt-3">
                                                 <li class="list-item me-2 mb-0"><a href="https://wa.me/6281277159091"
-                                                        class="text-muted like"><i class="uil uil-whatsapp me-1"></i>+62
-                                                        812-7715-9091</a></li>
+                                                        class="text-muted like"><i class="uil uil-whatsapp me-1"></i>{{ $dosen->no_wa }}</a></li>
                                             </ul>
                                         </div><!--end col-->
                                     </div><!--end row-->
-                                </div><!--end col-->
+                                </div><!--end col-->  
                             </div><!--end row-->
                         </div>
                     </div>
@@ -53,66 +50,48 @@
                                     <i data-feather="" class="fea icon-ex-md text-muted me-3"></i>
                                     <div class="flex-1">
                                         <h6 class="text-primary mb-0">Nama :</h6>
-                                        <a href="javascript:void(0)" class="text-muted">Lido Sabda Lesmana</a>
+                                        <a href="javascript:void(0)" class="text-muted">{{ $dosen->nama }}</a>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center mt-3">
                                     <i data-feather="" class="fea icon-ex-md text-muted me-3"></i>
                                     <div class="flex-1">
                                         <h6 class="text-primary mb-0">NIDN :</h6>
-                                        <a href="javascript:void(0)" class="text-muted">1028058801</a>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center mt-3">
-                                    <i data-feather="" class="fea icon-ex-md text-muted me-3"></i>
-                                    <div class="flex-1">
-                                        <h6 class="text-primary mb-0">Jenis Kelamin :</h6>
-                                        <a href="javascript:void(0)" class="text-muted">Laki-Laki</a>, <a
-                                            href="javascript:void(0)" class="text-muted">Japanese</a>, <a
-                                            href="javascript:void(0)" class="text-muted">Chinese</a>
+                                        <a href="javascript:void(0)" class="text-muted">{{ $dosen->nidn }}</a>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center mt-3">
                                     <i data-feather="" class="fea icon-ex-md text-muted me-3"></i>
                                     <div class="flex-1">
                                         <h6 class="text-primary mb-0">Jabatan Struktual:</h6>
-                                        <a href="javascript:void(0)" class="text-muted">Kaprodi Teknik Informatika</a>
+                                        <a href="javascript:void(0)" class="text-muted">{{ $dosen->jabatan_struktural }}</a>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center mt-3">
                                     <i data-feather="" class="fea icon-ex-md text-muted me-3"></i>
                                     <div class="flex-1">
                                         <h6 class="text-primary mb-0">Jabatan Fungsional :</h6>
-                                        <p class="text-muted mb-0">Lektor</p>
+                                        <p class="text-muted mb-0">{{ $dosen->jabatan_fungsional }}</p>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center mt-3">
                                     <i data-feather="" class="fea icon-ex-md text-muted me-3"></i>
                                     <div class="flex-1">
                                         <h6 class="text-primary mb-0">Status Ikatan Kerja :</h6>
-                                        <a href="javascript:void(0)" class="text-muted">Dosen Tetap</a>
+                                        <a href="javascript:void(0)" class="text-muted">Dosen {{ $dosen->ikatan_kerja }}</a>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center mt-3">
-                                    <i data-feather="" class="fea icon-ex-md text-muted me-3"></i>
-                                    <div class="flex-1">
-                                        <h6 class="text-primary mb-0">Status Aktivitas :</h6>
-                                        <a href="javascript:void(0)" class="text-muted">Aktif</a>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div><!--end col-->
 
                 <div class="col-lg-8 col-sm-12">
                     <div class="border-bottom pb-4">
-                        <h5 class="mx-2 mt-3">Lido Sabda Lesmana</h5>
-                        <p class="text-muted mb-0 mx-2 mt-3">I have started my career as a trainee and prove my self and
-                            achieve all the milestone with good guidance and reach up to the project manager. In this
-                            journey, I understand all the procedure which make me a good developer, team leader, and a
-                            project manager.</p>
-                    </div>
+                        <h5 class="mx-2 mt-3">{{ $dosen->nama }}</h5>
+                        <p class="text-muted mb-0 mx-2 mt-3">{{ $dosen->deskripsi }}</p>
+                    </div>   
+
                     <div class="col-lg-12 col-sm-12 mt-3">
                         <div class="border-bottom pb-4">
                             <h5>Mata Kuliah :</h5>
@@ -142,86 +121,13 @@
                                                     <div class="align-items-center">
                                                         <i class="uil uil-notes h6 text-primary"></i>
                                                         <p class="mb-0 d-inline fw-normal h6 ms-1"><a
-                                                                class="text-dark">KPT101</a></p>
-                                                    </div>
-                                                </th>
-                                                <td class="p-0 text-center">Proggraman Dasar</span></td>
-                                                <td class="p-2 text-center">2</td>
-                                                <td class="p-0 text-center">Semester 2</td>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center">
-                                                    <div class="align-items-center">
-                                                        <i class="uil uil-notes h6 text-primary"></i>
-                                                        <p class="mb-0 d-inline fw-normal h6 ms-1"><a
-                                                                class="text-dark">KPT102</a></p>
-                                                    </div>
-                                                </th>
-                                                <td class="p-0 text-center">Paket Program Niaga</span></td>
-                                                <td class="p-2 text-center">2</td>
-                                                <td class="p-0 text-center">Semester 3</td>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center">
-                                                    <div class="align-items-center">
-                                                        <i class="uil uil-notes h6 text-primary"></i>
-                                                        <p class="mb-0 d-inline fw-normal h6 ms-1"><a
-                                                                class="text-dark">KPT103</a></p>
-                                                    </div>
-                                                </th>
-                                                <td class="p-0 text-center">Matematika Diskrit</span></td>
-                                                <td class="p-2 text-center">2</td>
-                                                <td class="p-0 text-center">Semester 2</td>
-
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center">
-                                                    <div class="align-items-center">
-                                                        <i class="uil uil-notes h6 text-primary"></i>
-                                                        <p class="mb-0 d-inline fw-normal h6 ms-1"><a
                                                                 class="text-dark">TIF101</a></p>
                                                     </div>
                                                 </th>
-                                                <td class="p-0 text-center">Algoritma dan Pemrograman</span></td>
-                                                <td class="p-2 text-center">3</td>
-                                                <td class="p-0 text-center">Semester 3</td>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center">
-                                                    <div class="align-items-center">
-                                                        <i class="uil uil-notes h6 text-primary"></i>
-                                                        <p class="mb-0 d-inline fw-normal h6 ms-1"><a
-                                                                class="text-dark">TIF102</a></p>
-                                                    </div>
-                                                </th>
-                                                <td class="p-0 text-center">Elektronik Dasar</span></td>
+                                                <td class="p-0 text-center">Elektronika Dasar</span></td>
                                                 <td class="p-2 text-center">2</td>
-                                                <td class="p-0 text-center">Semester 3</td>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center">
-                                                    <div class="align-items-center">
-                                                        <i class="uil uil-notes h6 text-primary"></i>
-                                                        <p class="mb-0 d-inline fw-normal h6 ms-1"><a
-                                                                class="text-dark">TIF103</a></p>
-                                                    </div>
-                                                </th>
-                                                <td class="p-0 text-center">Kalkulus</span></td>
-                                                <td class="p-2 text-center">3</td>
-                                                <td class="p-0 text-center">Semester 3</td>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center">
-                                                    <div class="align-items-center">
-                                                        <i class="uil uil-notes h6 text-primary"></i>
-                                                        <p class="mb-0 d-inline fw-normal h6 ms-1"><a
-                                                                class="text-dark">TIF104</a></p>
-                                                    </div>
-                                                </th>
-                                                <td class="p-0 text-center">Pengantar Teknologi Informasi</span></td>
-                                                <td class="p-2 text-center">2</td>
-                                                <td class="p-0 text-center">Semester 3</td>
-                                            </tr>
+                                                <td class="p-0 text-center">Semester 2</td>
+                                            </tr>  
                                         </tbody>
                                     </table>
                                 </div>
@@ -265,7 +171,7 @@
                                                         Asia</span></td>
                                                     <td class="p-2 text-center">2021</td>
                                                     <td class="p-0 text-center"><a
-                                                            href="https://scholar.google.co.id/citations?view_op=view_citation&hl=id&user=DRtE0YQAAAAJ&citation_for_view=DRtE0YQAAAAJ:_FxGoFyzp5QC"class="badge bg-primary">Link
+                                                            href="https://scholar.google.co.id/citations?view_op=view_citation&hl=id&user=DRtE0YQAAAAJ&citation_for_view=DRtE0YQAAAAJ:_FxGoFyzp5QC" target="_blank" class="badge bg-primary">Link
                                                             Jurnal</a>
                                                     </td>
                                                 </tr>

@@ -65,6 +65,15 @@
                                 <option value="Dosen Fakultas">Dosen Fakultas</option>
                             </select>
                         </div>
+
+                        <div class="col-sm-12">
+                            <label for="firstName" class="form-label">Ikatan Kerja</label>
+                            <select class="form-select form-control" name="ikatan_kerja" aria-label="Default select example">
+                                <option selected>Pilih Program Studi</option>
+                                <option value="Tetap">Tetap</option>
+                                <option value="Tidak Tetap">Tidak Tetap</option>
+                            </select>
+                        </div>
                        
                         <div class="col-sm-12">
                             <label for="firstName" class="form-label">Program Studi</label>

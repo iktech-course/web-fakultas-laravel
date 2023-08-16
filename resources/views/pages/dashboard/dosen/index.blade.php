@@ -49,10 +49,10 @@
                                     <td class="text-center p-3">{{ $item->nama }}</td>
                                     <td class="text-center p-3">{{ $item->jabatan_struktural }}</td>
                                     <td class="text-center p-3">{{ $item->program_studi }}</td>
-                                    <td class="text-center p-3">
-                                        <a href="{{ route('dosen.show',$item->id) }}" class="btn btn-sm btn-primary">Detail</a>
-                                        <a href="{{ route('dosen.edit',$item->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#ConfirmModal-{{ $item->id }}" class="btn btn-sm btn-soft-danger mt-2 ms-2">Hapus</a>
+                                    <td class="text-center p-3 d-flex flex-md-wrap flex-sm-wrap">
+                                        <a href="{{ route('dosen.show',$item->id) }}" class="btn btn-sm btn-primary m-2">Detail</a>
+                                        <a href="{{ route('dosen.edit',$item->id) }}" class="btn btn-sm btn-warning m-2">Edit</a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#ConfirmModal-{{ $item->id }}" class="btn btn-sm btn-soft-danger m-2">Hapus</a>
                                     </td>
                                 </tr>
                                 <!-- Modal Content Start -->

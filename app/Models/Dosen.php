@@ -17,6 +17,7 @@ class Dosen extends Model
         'nidn',
         'foto',
         'jabatan_fungsional',
+        'ikatan_kerja',
         'jabatan_struktural',
         'program_studi',
         'no_wa',

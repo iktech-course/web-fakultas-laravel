@@ -48,7 +48,7 @@ Route::get('/fasilitas', [FasilitasController::class, 'index'])->name('landing.f
 Route::get('/pendaftaran', [PendaftaranController::class, 'index'])->name('landing.pendaftaran.index');
 Route::get('/kontak', [KontakController::class, 'index'])->name('landing.kontak.index');
 Route::get('/dosen', [DosenController::class, 'index'])->name('landing.dosen.index');
-Route::get('/dosen-detail', [DosenController::class, 'show'])->name('landing.dosen.show');
+Route::get('/dosen-detail/{id}', [DosenController::class, 'show'])->name('landing.dosen.show');
 Route::get('/profil-fakultas', [ProfilController::class, 'index'])->name('landing.profil.index');
 Route::get('/prodi', [ProdiController::class, 'index'])->name('landing.prodi.index');
 Route::get('/prodi/ti', [ProdiController::class, 'show_ti'])->name('landing.prodi.show-ti');
