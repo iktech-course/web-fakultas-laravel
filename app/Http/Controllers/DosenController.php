@@ -2,17 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dosen;
+use App\Models\Publikasi;
 use Illuminate\Http\Request;
 
 class DosenController extends Controller
 {
     public function index()
     {
-        return view('pages.landing.dosen.index');
+        $dosen = Dosen::get();
+
+        return view('pages.landing.dosen.index', compact('dosen'));
     }
 
-    public function show()
+    public function show($id)
     {
-        return view('pages.landing.dosen.show');
+        $dosen = Dosen::findOrFail($id);
+        return view('pages.landing.dosen.show', compact('dosen'));
+
+        $publikasi = Publikasi::where('publikasi')->get();
+        return view('pages.landing.dosen.show', compact('publikasi'));
     }
 }
