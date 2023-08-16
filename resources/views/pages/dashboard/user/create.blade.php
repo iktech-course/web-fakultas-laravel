@@ -42,7 +42,7 @@
 
                         <div class="col-sm-12">
                             <label for="firstName" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="firstName" placeholder="Password" value=""
+                            <input type="password" class="form-control" name="passswords" id="firstName" placeholder="Password" value=""
                                 required>
                             <div class="invalid-feedback">
                                 Password Harus Terisi
@@ -51,7 +51,7 @@
 
                         <div class="col-sm-12">
                             <label for="firstName" class="form-label">Konfirmasi Password</label>
-                            <input type="password" class="form-control" id="firstName" placeholder="Konfirmasi Password" value=""
+                            <input type="password" class="form-control" name="password-confirm" id="firstName" placeholder="Konfirmasi Password" value=""
                                 required>
                             <div class="invalid-feedback">
                                 Konfirmasi Password Harus Terisi
