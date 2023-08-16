@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class UserCotroller extends Controller
 {
@@ -45,6 +46,21 @@ class UserCotroller extends Controller
             'password' => 'required|confirmed',
             'level' => 'required'
         ]);
+
+        // dd($request);
+        // Upload Foto
+        $foto = $request->file('foto');
+        $foto->storeAs('public/user', $foto->hashName());
+
+        $user = User::create([
+            'nama' => $request->input('nama'),
+            'foto' => $foto->hashName(),
+            'email' => $request->input('email'),
+            'password' => bcrypt($request->input('password')),
+            'level' => $request->input('level')
+        ]);
+
+        return redirect()->route('user.index');
     }
 
     /**
@@ -52,7 +68,7 @@ class UserCotroller extends Controller
      */
     public function show(string $id)
     {
-        //
+        //   
     }
 
     /**
@@ -60,7 +76,9 @@ class UserCotroller extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        return view('pages.dashboard.user.edit', compact('user'));
     }
 
     /**
@@ -68,7 +86,41 @@ class UserCotroller extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required',
+            'foto' => 'image|mimes:png,jpg,jpeg|max:2000',
+            'email' => 'required',
+            'password' => 'required|confirmed',
+            'level' => 'required'
+        ]);
+
+        // dd($request);
+
+        $user = User::findOrFail($id);
+
+        if($request->hasFile('foto'))
+        {
+            $foto = $request->file('foto');
+            $foto->storeAs('public/user/'.$foto->hashName());
+
+            $user->update([
+                'nama' => $request->input('nama'),
+                'foto' => $foto->hashName(),
+                'email' => $request->input('email'),
+                'password' => bcrypt($request->input('password')),
+                'level' => $request->input('level')
+            ]);
+        }
+        else {
+            $user->update([
+                'nama' => $request->input('nama'),
+                'email' => $request->input('email'),
+                'password' => bcrypt($request->input('password')),
+                'level' => $request->input('level')
+            ]); 
+        }
+
+        return redirect()->route('user.index');
     }
 
     /**
@@ -76,6 +128,15 @@ class UserCotroller extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        // Hapus Gambar
+        Storage::delete('public/user', $user->foto);
+
+        // Hapus Berita
+        $user->delete();
+
+        // Kembali Ke Halaman Berita Index
+        return redirect()->route('user.index');
     }
 }

@@ -21,12 +21,20 @@
                 <div class="dropdown dropdown-primary">
                     <button type="button" class="btn btn-soft-light dropdown-toggle p-0" data-bs-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"><img
-                            src="{{ asset('assets/dashboard/images/client/05.jpg') }}"
+                            src="@if (Auth::user()->foto)
+                            {{ asset('storage/user/'.Auth::user()->foto) }}
+                            @else
+                            {{ asset('assets/landing/images/1undhari/profil-default.png') }}
+                            @endif"
                             class="avatar avatar-ex-small rounded" alt=""></button>
                     <div class="dropdown-menu dd-menu dropdown-menu-end shadow border-0 mt-3 py-3"
                         style="min-width: 200px;">
                         <a class="dropdown-item d-flex align-items-center text-dark pb-3" href="profile.html">
-                            <img src="{{ asset('assets/dashboard/images/client/05.jpg') }}"
+                            <img src="@if (Auth::user()->foto)
+                            {{ asset('storage/user/'.Auth::user()->foto) }}
+                            @else
+                            {{ asset('assets/landing/images/1undhari/profil-default.png') }}
+                            @endif"
                                 class="avatar avatar-md-sm rounded-circle border shadow" alt="">
                             <div class="flex-1 ms-2">
                                 <span class="d-block">{{ Auth::user()->nama }}</span>

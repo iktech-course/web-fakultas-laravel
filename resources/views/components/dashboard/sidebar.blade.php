@@ -20,6 +20,7 @@
             <li class="sidebar-item">
                 <a href="{{ route('kegiatan.index') }}"><i class="ti ti-book-2 me-2"></i>Kegiatan Akademik</a>
             </li>
+            @if (Auth::user()->level == 1)
             <li class="sidebar-item">
                 <a href="{{ route('pesan.index') }}"><i class="ti ti-message me-2"></i>Pesan</a>
             </li>
@@ -40,6 +41,7 @@
                     </ul>
                 </div>
             </li>
+            @endif
         </ul>
         <!-- sidebar-menu  -->
     </div>
