@@ -2,18 +2,24 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class UserCotroller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
-        return view('pages.dashboard.user.index');
+        $users = User::paginate(5);
+        return view('pages.dashboard.user.index', compact('users'));
 
     }
 
@@ -32,7 +38,7 @@ class UserCotroller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
