@@ -158,23 +158,21 @@
                                             </thead>
 
                                             <tbody>
+                                                @foreach ($publikasi as $item)
                                                 <tr>
                                                     <th class="text-center">
                                                         <div class="align-items-center">
                                                             <i class="uil uil-book-open h6 text-primary"></i>
                                                             <p class="mb-0 d-inline fw-normal h6 ms-1"><a
-                                                                    class="text-dark"> Rancang Bangun Sistem Informasi
-                                                                    Lowongan Kerja Berbasis WEB</a></p>
+                                                                    class="text-dark"> {{ $publikasi->judul }}</a></p>
                                                         </div>
                                                     </th>
-                                                    <td class="p-0 text-center">Jurnal Ilmiah Teknologi Informasi
-                                                        Asia</span></td>
-                                                    <td class="p-2 text-center">2021</td>
-                                                    <td class="p-0 text-center"><a
-                                                            href="https://scholar.google.co.id/citations?view_op=view_citation&hl=id&user=DRtE0YQAAAAJ&citation_for_view=DRtE0YQAAAAJ:_FxGoFyzp5QC" target="_blank" class="badge bg-primary">Link
-                                                            Jurnal</a>
+                                                    <td class="p-0 text-center">{{ $publikasi->publisher }}</span></td>
+                                                    <td class="p-2 text-center">{{ $publikasi->tahun }}</td>
+                                                    <td class="p-0 text-center"><a href="{{ $publikasi->link }}" target="_blank" class="badge bg-primary">Link Jurnal</a>
                                                     </td>
-                                                </tr>
+                                                </tr>    
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
