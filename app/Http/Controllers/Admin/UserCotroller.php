@@ -38,7 +38,13 @@ class UserCotroller extends Controller
      */
     public function store(Request $request)
     {
-        
+        $this->validate($request, [
+            'nama' => 'required',
+            'foto' => 'required|image|mimes:png,jpg,jpeg|max:2000',
+            'email' => 'required|unique:users,email',
+            'password' => 'required|confirmed',
+            'level' => 'required'
+        ]);
     }
 
     /**
