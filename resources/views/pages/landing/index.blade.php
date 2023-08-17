@@ -269,7 +269,7 @@
                     <div class="card team team-primary text-center rounded border-0">
                         <div class="card-body">
                             <div class="position-relative">
-                                <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}"
+                                <img src="{{ asset('/storage/berita/'.$item->foto) }}"
                                     class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
 
                             </div>
@@ -286,7 +286,7 @@
                     <div class="card team team-primary text-center rounded border-0">
                         <div class="card-body">
                             <div class="position-relative">
-                                <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}"
+                                <img src="{{ asset('/storage/berita/'.$item->foto) }}"
                                     class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
                             </div>
                             <div class="content pt-3">
@@ -301,7 +301,7 @@
                     <div class="card team team-primary text-center rounded border-0">
                         <div class="card-body">
                             <div class="position-relative">
-                                <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}"
+                                <img src="{{ asset('/storage/berita/'.$item->foto) }}"
                                     class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
                             </div>
                             <div class="content pt-3">
@@ -317,7 +317,7 @@
                     <div class="card team team-primary text-center rounded border-0">
                         <div class="card-body">
                             <div class="position-relative">
-                                <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}"
+                                <img src="{{ asset('/storage/berita/'.$item->foto) }}"
                                     class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
                             </div>
                             <div class="content pt-3">
