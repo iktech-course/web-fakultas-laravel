@@ -13,8 +13,8 @@
 
                             <ul class="list-unstyled mt-3 mb-0">
                                 <li class="align-items-center justify-content-center list-inline-item mx-1">
-                                    <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}" class="avatar avatar-ex-small rounded-pill shadow" alt="">
-                                    <a href="javascript:void(0)" class="text-white title-dark ms-1">Elinda Revita</a>
+                                    <img src="{{ asset('storage/dosen/'.$dosen->foto) }}" class="avatar avatar-ex-small rounded-pill shadow" alt="">
+                                    <a href="javascript:void(0)" class="text-white title-dark ms-1">{{ $dosen->nama }}</a>
                                 </li>
                             </ul>
                         </div>
@@ -56,7 +56,6 @@
                                     <div class="row">
                                         <div class="col-md-6 mt-4 pt-2">
                                             <h5 class="mb-0">Semester 1</h5>
-        
                                             <div class="table-responsive bg-white shadow rounded mt-4">
                                                 <table class="table mb-0 table-center">
                                                     <thead>
@@ -68,116 +67,19 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($si_1 as $item)
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
                                                         </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT102</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Paket Program Niaga</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT103</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Matematika Diskrit</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">TIF101</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Algoritma dan Pemrograman</span></td>
-                                                            <td class="p-2 text-center">3</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">TIF102</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Elektronik Dasar</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">TIF103</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Kalkulus</span></td>
-                                                            <td class="p-2 text-center">3</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">TIF104</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Pengantar Teknologi Informasi</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">UND101</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Agama</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">UND102</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Kewarganegaraan</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">UND103</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Bahasa Indonesia</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="align-items-center">
-                                                                    <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">UND104</a></p>
-                                                                </div>
-                                                            </th>
-                                                            <td class="p-0 text-center">Pengenmabangan Karakter Berakhlak Mulia</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                        </tr>
+                                                        @endforeach
+
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -185,7 +87,6 @@
         
                                         <div class="col-md-6 mt-4 pt-2">
                                             <h5 class="mb-0">Semester 2</h5>
-        
                                             <div class="table-responsive bg-white shadow rounded mt-4">
                                                 <table class="table mb-0 table-center">
                                                     <thead>
@@ -197,15 +98,18 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($si_2 as $item)
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                        </tr>
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -225,15 +129,18 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($si_3 as $item)
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                        </tr>
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -241,7 +148,6 @@
 
                                         <div class="col-md-6 mt-4 pt-2">
                                             <h5 class="mb-0">Semester 4</h5>
-        
                                             <div class="table-responsive bg-white shadow rounded mt-4">
                                                 <table class="table mb-0 table-center">
                                                     <thead>
@@ -253,15 +159,18 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($si_4 as $item)
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                        </tr>                                               
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -269,7 +178,6 @@
 
                                         <div class="col-md-6 mt-4 pt-2">
                                             <h5 class="mb-0">Semester 5</h5>
-        
                                             <div class="table-responsive bg-white shadow rounded mt-4">
                                                 <table class="table mb-0 table-center">
                                                     <thead>
@@ -281,23 +189,25 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($si_5 as $item)
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                        </tr>     
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
                                         </div><!--end col 5-->
 
                                         <div class="col-md-6 mt-4 pt-2">
-                                            <h5 class="mb-0">Semester 6</h5>
-        
+                                            <h5 class="mb-0">Semester 6</h5>       
                                             <div class="table-responsive bg-white shadow rounded mt-4">
                                                 <table class="table mb-0 table-center">
                                                     <thead>
@@ -309,23 +219,25 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($si_6 as $item)
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
-                                                    </tbody>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                        </tr>                                                             
+                                                        @endforeach
+                                                  </tbody>
                                                 </table>
                                             </div>
                                         </div><!--end col 6-->
 
                                         <div class="col-md-6 mt-4 pt-2">
-                                            <h5 class="mb-0">Semester 7</h5>
-        
+                                            <h5 class="mb-0">Semester 7</h5>       
                                             <div class="table-responsive bg-white shadow rounded mt-4">
                                                 <table class="table mb-0 table-center">
                                                     <thead>
@@ -337,15 +249,18 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($si_7 as $item)
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                        </tr>                                                          
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -365,15 +280,18 @@
                                                     </thead>
                     
                                                     <tbody>
+                                                        @foreach ($si_8 as $item)
                                                         <tr>
                                                             <th class="text-center">
                                                                 <div class="align-items-center">
                                                                     <i class="uil uil-notes h6 text-primary"></i>
-                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">KPT101</a></p>
+                                                                    <p class="mb-0 d-inline fw-normal h6 ms-1"><a class="text-dark">{{ $item->kode_mk }}</a></p>
                                                                 </div>
                                                             </th>
-                                                            <td class="p-0 text-center">Bahasa Inggris</span></td>
-                                                            <td class="p-2 text-center">2</td>
+                                                            <td class="p-0 text-center">{{ $item->nama_mk }}</span></td>
+                                                            <td class="p-2 text-center">{{ $item->sks }}</td>
+                                                        </tr>                                                            
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -385,11 +303,10 @@
                                     <h4 class="title mb-0">Kepala Prodi Sistem Informasi</h4>
         
                                     <div class="d-md-flex align-items-center mt-4 pt-2">
-                                        <img src="{{ asset('assets/landing/images/1undhari/profil-default.png') }}" class="avatar avatar-medium rounded-pill" alt="">
-        
+                                        <img src="{{ asset('storage/dosen/'.$dosen->foto) }}" class="avatar avatar-medium rounded-pill" alt="">
                                         <div class="ms-md-3 mt-4 mt-sm-0">
-                                            <a href="{{ route('landing.dosen.index') }}" class="text-dark h5">Erlinda Revita</a>
-                                            <p class="text-muted mb-0 mt-2">I have started my career as a trainee and prove my self and achieve all the milestone with good guidance and reach up to the project manager. In this journey, I understand all the procedure which make me a good developer, team leader, and a project manager.</p>
+                                            <a href="{{ route('landing.dosen.index') }}" class="text-dark h5">{{ $dosen->nama }}</a>
+                                            <p class="text-muted mb-0 mt-2">{!! $dosen->deskripsi !!}</p>
                                         </div>
                                     </div>
                                 </div>
