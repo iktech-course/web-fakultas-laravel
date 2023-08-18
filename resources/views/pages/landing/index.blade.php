@@ -265,69 +265,23 @@
             </div><!--end row-->
 
             <div class="row">
+                @foreach ($dosen as $item)
                 <div class="col-lg-3 col-md-6 mt-4 pt-2">
                     <div class="card team team-primary text-center rounded border-0">
                         <div class="card-body">
                             <div class="position-relative">
-                                <img src="{{ asset('/storage/berita/'.$item->foto) }}"
+                                <img src="{{ asset('/storage/dosen/'.$item->foto) }}"
                                     class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
 
                             </div>
                             <div class="content pt-3">
-                                <h5 class="mb-0"><a href="{{ route('landing.dosen.index') }}" class="name text-dark">Firmansyah
-                                        Putra</a></h5>
-                                <small class="designation text-muted">Dekan Filkom</small>
+                                <h5 class="mb-0"><a href="{{ route('landing.dosen.index') }}" class="name text-dark">{{ $item->nama }}</a></h5>
+                                <small class="designation text-muted">{{ $item->jabatan_struktural }}</small>
                             </div>
                         </div>
                     </div>
                 </div><!--end col-->
-
-                <div class="col-lg-3 col-md-6 mt-4 pt-2">
-                    <div class="card team team-primary text-center rounded border-0">
-                        <div class="card-body">
-                            <div class="position-relative">
-                                <img src="{{ asset('/storage/berita/'.$item->foto) }}"
-                                    class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
-                            </div>
-                            <div class="content pt-3">
-                                <h5 class="mb-0"><a href="{{ route('landing.dosen.index') }}" class="name text-dark">Asril</a></h5>
-                                <small class="designation text-muted">Wakil Dekan Filkom</small>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end col-->
-
-                <div class="col-lg-3 col-md-6 mt-4 pt-2">
-                    <div class="card team team-primary text-center rounded border-0">
-                        <div class="card-body">
-                            <div class="position-relative">
-                                <img src="{{ asset('/storage/berita/'.$item->foto) }}"
-                                    class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
-                            </div>
-                            <div class="content pt-3">
-                                <h5 class="mb-0"><a href="{{ route('landing.dosen.index') }}" class="name text-dark">Lido Sabda
-                                        Lesmana</a></h5>
-                                <small class="designation text-muted">Kaprodi Teknik Informatika</small>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end col-->
-
-                <div class="col-lg-3 col-md-6 mt-4 pt-2">
-                    <div class="card team team-primary text-center rounded border-0">
-                        <div class="card-body">
-                            <div class="position-relative">
-                                <img src="{{ asset('/storage/berita/'.$item->foto) }}"
-                                    class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
-                            </div>
-                            <div class="content pt-3">
-                                <h5 class="mb-0"><a href="{{ route('landing.dosen.index') }}" class="name text-dark">Elinda Revita</a>
-                                </h5>
-                                <small class="designation text-muted">Kaprodi Sistem Informasi</small>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end col-->
+                @endforeach
             </div><!--end row-->
         </div><!--end container-->
     </section><!--end section-->
