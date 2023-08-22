@@ -14,7 +14,7 @@
                             <ul class="list-unstyled mt-3 mb-0">
                                 <li class="align-items-center justify-content-center list-inline-item mx-1">
                                     <img src="{{ asset('storage/dosen/'.$dosen->foto) }}" class="avatar avatar-ex-small rounded-pill shadow" alt="">
-                                    <a href="javascript:void(0)" class="text-white title-dark ms-1">{{ $dosen->nama }}</a>
+                                    <a href="{{ route('landing.dosen.show', $dosen->id) }}" class="text-white title-dark ms-1">{{ $dosen->nama }}</a>
                                 </li>
                             </ul>
                         </div>
@@ -305,7 +305,7 @@
                                     <div class="d-md-flex align-items-center mt-4 pt-2">
                                         <img src="{{ asset('storage/dosen/'.$dosen->foto) }}" class="avatar avatar-medium rounded-pill" alt="">
                                         <div class="ms-md-3 mt-4 mt-sm-0">
-                                            <a href="{{ route('landing.dosen.index') }}" class="text-dark h5">{{ $dosen->nama }}</a>
+                                            <a href="{{ route('landing.dosen.show', $dosen->id) }}" class="text-dark h5">{{ $dosen->nama }}</a>
                                             <p class="text-muted mb-0 mt-2">{!! $dosen->deskripsi !!}</p>
                                         </div>
                                     </div>

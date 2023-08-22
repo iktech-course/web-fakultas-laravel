@@ -275,7 +275,7 @@
 
                             </div>
                             <div class="content pt-3">
-                                <h5 class="mb-0"><a href="{{ route('landing.dosen.index') }}" class="name text-dark">{{ $item->nama }}</a></h5>
+                                <h5 class="mb-0"><a href="{{ route('landing.dosen.show', $item->id) }}" class="name text-dark">{{ $item->nama }}</a></h5>
                                 <small class="designation text-muted">{{ $item->jabatan_struktural }}</small>
                             </div>
                         </div>

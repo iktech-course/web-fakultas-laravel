@@ -23,7 +23,7 @@
                         </div>
                         <div class="flex-1 ms-3">
                             <h6 class="mb-0 text-muted">Jumlah Berita</h6>
-                            <p class="fs-5 text-dark fw-bold mb-0"><span class="counter-value" data-target="10">10</span>
+                            <p class="fs-5 text-dark fw-bold mb-0"><span class="counter-value" data-target="{{ $berita }}">{{ $berita }}</span>
                             </p>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                         </div>
                         <div class="flex-1 ms-3">
                             <h6 class="mb-0 text-muted">Dosen</h6>
-                            <p class="fs-5 text-dark fw-bold mb-0"><span class="counter-value" data-target="15">15</span>
+                            <p class="fs-5 text-dark fw-bold mb-0"><span class="counter-value" data-target="{{ $dosen }}">{{ $dosen }}</span>
                             </p>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="flex-1 ms-3">
                             <h6 class="mb-0 text-muted">Pesan</h6>
-                            <p class="fs-5 text-dark fw-bold mb-0"><span class="counter-value" data-target="30">30</span>
+                            <p class="fs-5 text-dark fw-bold mb-0"><span class="counter-value" data-target="{{ $pesan }}">{{ $pesan }}</span>
                             </p>
                         </div>
                     </div>

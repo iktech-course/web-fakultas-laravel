@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Berita;
+use App\Models\Dosen;
+use App\Models\Pesan;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,6 +17,9 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('pages.dashboard.index');
+        $berita = Berita::count();
+        $dosen = Dosen::count();
+        $pesan = Pesan::count();   
+        return view('pages.dashboard.index', compact('berita','dosen','pesan'));
     }
 }
