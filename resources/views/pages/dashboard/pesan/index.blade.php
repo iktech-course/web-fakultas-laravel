@@ -34,73 +34,94 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Start -->
-                        <tr>
-                            <th class="p-3">1</th>
-                            <td class="text-center p-3">Ramadhan Simanjuntak</td>
-                            <td class="text-center p-3">rmdsimanjuntak@gmail.com</td>
-                            <td class="text-center p-3">0812345678</td>
-                            <td class="text-center p-3">Bagaimana Cara Mendaftar Di FILKOM UNDHARI</td>
-                            <td class="text-start p-3">
-                                <a href="javascript:void(0)" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#openmail">Detail</a>
-                                <a href="#" class="btn btn-sm btn-soft-danger">Hapus</a>
-                            </td>
-                        </tr>
-                        <!-- End -->
+                       @foreach ($pesan as $no => $item)
+                            <!-- Start -->
+                            <tr>
+                                <th class="p-3"> {{ ++$no + ($pesan->currentPage() - 1) * $pesan->perPage() }}</th>
+                                <td class="text-center p-3">{{ $item->nama }}</td>
+                                <td class="text-center p-3">{{ $item->email }}</td>
+                                <td class="text-center p-3">{{ $item->no_wa }}</td>
+                                <td class="text-center p-3">{{ substr($item->pesan, 0, 20) }}</td>
+                                <td class="text-start p-3 d-flex flex-md-wrap flex-sm-wrap">
+                                    <a href="javascript:void(0)" class="btn btn-sm btn-primary m-2" data-bs-toggle="modal" data-bs-target="#openmail-{{ $item->id }}">Detail</a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#ConfirmModal-{{ $item->id }}" class="btn btn-sm btn-soft-danger m-2">Hapus</a>
+                                </td>
+                            </tr>
+                            <!-- End -->
+
+                            <!-- Modal Content Start -->
+                            <div class="modal fade" id="openmail-{{ $item->id }}" tabindex="-1" aria-labelledby="LoginForm-title" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content rounded shadow border-0">
+                                        <div class="modal-header border-bottom">
+                                            <h5 class="modal-title" id="LoginForm-title">Detail Pesan</h5>
+                                            <button type="button" class="btn btn-icon btn-close" data-bs-dismiss="modal" id="close-modal"><i class="uil uil-times fs-4 text-dark"></i></button>
+                                        </div>
+                                        <div class="modal-body p-0">
+                                            <div class="p-3 border-bottom">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-1 ms-2">
+                                                            <span class="d-block fw-bold text-primary">{{ $item->nama }}</span>
+                                                            <div class="text-muted">Email : <span class="text-black fw-bold">{{ $item->email }}</span></div>
+                                                            <div class="text-muted">Nomor WA : <span class="text-black fw-bold">{{ $item->no_wa }}</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="p-3 border-bottom">
+                                                <p class="text-muted mb-0">{{ $item->pesan }}</p>
+                                            </div>
+
+                                            <div class="p-3">
+                                                <a href="https://wa.me/{{ substr($item->no_wa, 1) }}" target="_blank" class="btn btn-sm btn-success"> <i class="uil uil-whatsapp me-2"></i>Balas Di Whatsapp</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal Content End -->
+
+                             <!-- Modal Content Start -->
+                             <div class="modal fade" id="ConfirmModal-{{ $item->id }}" tabindex="-1"
+                                aria-labelledby="LoginForm-title" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content rounded shadow border-0">
+                                        <div class="modal-header border-bottom">
+                                            <h5 class="modal-title" id="LoginForm-title">Konfirmasi Hapus Data</h5>
+                                            <button type="button" class="btn btn-icon btn-close"
+                                                data-bs-dismiss="modal" id="close-modal"><i
+                                                    class="uil uil-times fs-4 text-dark"></i></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="p-3 rounded box-shadow">
+                                                <p class="text-muted mb-0">Apakah Anda Akan Menghapus Data Ini...?</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <form action="{{ route('pesan.destroy', $item->id) }}" method="POST">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Batalkan</button>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger">Hapus</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal Content End -->
+
+                       @endforeach
                     </tbody>
                 </table>
             </div>
         </div><!--end col-->
     </div><!--end row-->
 
-    <div class="row text-center">
-        <!-- PAGINATION START -->
-        <div class="col-12 mt-4">
-            <div class="d-md-flex align-items-center text-center justify-content-between">
-                <span class="text-muted me-3">Showing 1 - 10 out of 50</span>
-                <ul class="pagination mb-0 justify-content-center mt-4 mt-sm-0">
-                    <li class="page-item"><a class="page-link" href="javascript:void(0)" aria-label="Previous">Prev</a></li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#" aria-label="Next">Next</a></li>
-                 </ul>
-            </div>
-        </div><!--end col-->
-        <!-- PAGINATION END -->
+    <div class="row text-end mt-3">
+        {{ $pesan->links('vendor.pagination.bootstrap-5') }}
     </div><!--end row-->
 </div>
-<!-- Modal Content Start -->
-        <div class="modal fade" id="openmail" tabindex="-1" aria-labelledby="LoginForm-title" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content rounded shadow border-0">
-                    <div class="modal-header border-bottom">
-                        <h5 class="modal-title" id="LoginForm-title">Detail Pesan</h5>
-                        <button type="button" class="btn btn-icon btn-close" data-bs-dismiss="modal" id="close-modal"><i class="uil uil-times fs-4 text-dark"></i></button>
-                    </div>
-                    <div class="modal-body p-0">
-                        <div class="p-3 border-bottom">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-1 ms-2">
-                                        <span class="d-block fw-bold text-primary">Ramadhan Simanjuntak</span>
-                                        <div class="text-muted">Email : <span class="text-black fw-bold">rmdsimanjuntak@gmail.com</span></div>
-                                        <div class="text-muted">Nomor WA : <span class="text-black fw-bold">0812345678</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-3 border-bottom">
-                            <p class="text-muted mb-0">Bagaimana Cara Mendaftar di FILKOM UNDHARI</p>
-                        </div>
-
-                        <div class="p-3">
-                            <a href="#" class="btn btn-sm btn-success"> <i class="uil uil-whatsapp me-2"></i>Balas Di Whatsapp</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal Content End -->
 @endsection

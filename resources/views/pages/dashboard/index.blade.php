@@ -46,6 +46,7 @@
                 </a>
             </div><!--end col-->
 
+            @if (Auth::user()->level == 1)
             <div class="col-4 mt-4">
                 <a href="#!"
                     class="features feature-primary d-flex justify-content-between align-items-center rounded shadow p-3">
@@ -61,6 +62,7 @@
                     </div>
                 </a>
             </div><!--end col-->
+            @endif
         </div><!--end row-->
     </div>
 @endsection

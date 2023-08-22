@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Pesan;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PesanController extends Controller
 {
@@ -12,8 +13,8 @@ class PesanController extends Controller
      */
     public function index()
     {
-        //
-        return view('pages.dashboard.pesan.index');
+        $pesan = Pesan::paginate(5);
+        return view('pages.dashboard.pesan.index', compact('pesan'));
 
     }
 
@@ -62,6 +63,9 @@ class PesanController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $pesan = Pesan::findOrFail($id);
+        $pesan->delete();
+
+        return redirect()->route('pesan.index');
     }
 }
